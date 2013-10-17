@@ -1,4 +1,5 @@
 \documentclass[12pt]{report}
+\usepackage{graphicx}
 \usepackage{listings}
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -6,6 +7,7 @@
 
 \doublespacing
 \begin{document}
+\lstset{language=Python}
 \title{Web-Scraping:\\ How Charlotte Is A Life Saver Again}
 \author{Fayang Pan}
 \date{\today}
@@ -87,13 +89,50 @@ To quote from its website, "Scrapy is a fast high-level screen scraping and web 
 
 Scrapy depends not only on Python, but also few other libraries. Scrapy uses Twisted\footnote{http://twistedmatrix.com/trac/}, an event-driven networking engine, and Zope\footnote{http://zope2.zope.org/about-zope-2/what-is-zope-2}, a web application server framework. The installation guide can be found on Scrapy's website\footnote{http://doc.scrapy.org/en/latest/intro/install.html}.
 
+There are few basic ideas or classes in Scrapy framework.
+
+First, spider. \textit{Spider.py} is responsible for going into the webpages and crawl data from then. At the very least, user needs to specify domain, starting url, and where in the webpage to crawl from. If the user wants to scrape from multiple tables or multiple pages, or even conditionally scrape from certain pages, he/she can define those in \textit{Spider.py}
+
+Second, items. \textit{Items.py} is a class specifing the column names in result. In the end, the result would be a table consisting of all the scraped data, and items defines what are they. Items in the same class will be in the same table.
+
+Third, settings. \textit{Settings.py} includes information such as what info will be written into the log file, limit on frequency of requests sent, and other customizable features. In the event of a user login is needed, the user can pre-fill that in the login to avoid access denial.
+
+Forth, pipeline. \textit{Pipelines.py} decides how the scraped data are processed. By default, all data will be dumped in a single file. However, if the user wants to add a filter to get rid of some data, pipeline handles that. If the user wants to split the results from one spider into two seperate files, he/she can do that through coding in \textit{pipelines.py}.
+
+Scrapy has more advanced features, which would fall outside of the scope of this paper. In the next chapter, I would like to offer a high level approach of web-scraping using Scrapy.
+
 \chapter{Scrapy Explained in Greater Detail}
 
 \section{Test How Much You Can See}
-Web-scraping depends on whatever the browser can "see", and there are times when the browser sees less than a person does. To check, one can use 
+Web-scraping depends on whatever the browser can "see", and there are times when the browser sees less than a person does. To check, one can use the following line of code in cmd/terminal 
 \begin{lstlisting}
-scrapy
+scrapy shell http://amazon.com
 \end{lstlisting}
+After Scrapy finish analyzing the web address, it goes into its prompt and asks for further instructions. Here, the user can key in 
+\begin{lstlisting}
+view(response)
+\end{lstlisting} 
+A browser window opens and shows you what the website is like in Scrapy's perspective.\\
+\\
+\includegraphics[width=0.5\textwidth]{amazon_scrapy_view.png}
+\includegraphics[width=0.5\textwidth]{amazon_normal_view.png}
+What scrapy is able to download locally V.S. what the user can see.
+\section{Test If the Data is Scrapable}
+While in theory, any data can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that optimistic. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embeded \textit{JavaScript} code, getting the result of a function call will be more difficult.
+
+After setting up a project with few commands\footnote{For more information, visit http://doc.scrapy.org/en/latest/intro/tutorial.html. The website has a simple example on how to start a project}, it is wise to test if certain data are scrapable. Before knowing that, one needs to specify where exactly the data are located. To establish a standard way of referring to a certain field in the webpage, XPath\footnote{Abbreviation of ``XML Path Language''.For more information, see http://www.w3.org/TR/xpath/} is used.
+
+To retrieve a certain XPath, one can use an built-in \textit{``Inspect Element''} tool, or an extension such as \textit{firebug}\footnote{Visit http://getfirebug.com/ for more information}, available for \textit{Firefox} and \textit{Google Chrome}. Here is an example using \textit{``Inspect Element''} in \textit{Google Chrome} to extract an XPath from \textit{http://www.nbcnews.com}:\\
+\includegraphics[width=\textwidth]{XPath_example.png}
+
+And the XPath of the link is \textit{//*[@id=``cell1'']/div[8]/div/div/h6/a}.
+
+After knowing a specific XPath, one can write related code to test if Scrapy can recognize the XPath and scrape the data.If one piece of data is scrapable, it is likely that the entire table that piece is located, can be scraped. If the table is scrapable, it is also likely that similar tables can be scraped, too.
+
+\section{Iterators}
+
+Web-scraping relies heavily on the structure of the webpage. If the webpage is very organize, it is possible for the user to use XPath to find all entries in a table, and send out request to scrape the next page.  
+
 Glossary of Terms
 
 Ajax, JavaScript
