@@ -2,11 +2,11 @@
 \contentsline {section}{\numberline {1.1}An Overview of Web-Scraping}{4}
 \contentsline {section}{\numberline {1.2}Usage of Web-Scraping}{4}
 \contentsline {section}{\numberline {1.3}Advantages of Web-Scraping}{5}
-\contentsline {subsection}{\numberline {1.3.1}Fast}{5}
-\contentsline {subsection}{\numberline {1.3.2}Convenient for Data Analysis}{5}
-\contentsline {subsection}{\numberline {1.3.3}Accessible}{6}
-\contentsline {section}{\numberline {1.4}Disadvantages of Web-Scraping}{6}
-\contentsline {subsection}{\numberline {1.4.1}Legality}{6}
+\contentsline {subsection}{\numberline {1.3.1}Speed}{5}
+\contentsline {subsection}{\numberline {1.3.2}Convenience for Data Analysis}{5}
+\contentsline {subsection}{\numberline {1.3.3}Availability}{6}
+\contentsline {section}{\numberline {1.4}Challengess of Web-Scraping}{6}
+\contentsline {subsection}{\numberline {1.4.1}Legality(extensive overhaul needed)}{6}
 \contentsline {subsection}{\numberline {1.4.2}Intricate and Dynamic Web Structures}{7}
 \contentsline {subsection}{\numberline {1.4.3}Instability}{7}
 \contentsline {chapter}{\numberline {2}My Internship}{8}
@@ -17,3 +17,7 @@
 \contentsline {section}{\numberline {3.1}Test How Much You Can See}{12}
 \contentsline {section}{\numberline {3.2}Test If the Data is Scrapable}{13}
 \contentsline {section}{\numberline {3.3}Iterators}{14}
+\contentsline {section}{\numberline {3.4}Specification}{15}
+\contentsline {section}{\numberline {3.5}Produce a sample output}{16}
+\contentsline {section}{\numberline {3.6}Customization}{17}
+\contentsline {chapter}{\numberline {4}Future Developement of the Project}{18}

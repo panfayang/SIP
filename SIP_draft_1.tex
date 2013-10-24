@@ -4,10 +4,18 @@
 \usepackage{indentfirst}
 \usepackage{setspace}
 \usepackage{fullpage}
-
+\usepackage{courier}
 \doublespacing
 \begin{document}
-\lstset{language=Python}
+\lstset{language=Python,
+basicstyle=\ttfamily,
+commentstyle=\textit,
+breaklines=true,
+numbersep=5pt,
+xleftmargin=.25in,
+xrightmargin=.25in,
+columns=fullflexible,
+showstringspaces=false}
 \title{Web-Scraping:\\ How Charlotte Is A Life Saver Again}
 \author{Fayang Pan}
 \date{\today}
@@ -18,70 +26,73 @@
 \chapter{An Evaluation of Web-Scraping}
 \section*{Introduction}
 
-\indent Web-scraping is a way to collect existing information from the Internet. It is a nascent, powerful, but disputable subject in the arena of modern technology. Using tools to simulate viewing and downloading of a webpage through browser, the “spider” (a metaphoric name for the part that goes into each web structure) goes into the webpage and “crawl” (a metaphor for copy-and-paste) desirable contents into a formatted data structure. Since this technology only requires access to the webpages, theoretically, anything that can be downloaded can be scraped off the Internet.
+\indent Web-scraping is a way to collect existing information from the Internet.(KEEP AN EYE ON THE OPENING SENTENCE) It is a nascent, powerful, but disputable subject in the arena of modern technology. Using tools to simulate viewing and downloading of a webpage through a browser, the `spider' (a metaphoric name for the part that goes into each web structure) goes into the webpage and `crawls' (a metaphor for copy-and-paste) desirable contents into a formatted data structure. Since this technology only requires access to the webpages, theoretically, anything that can be downloaded can be scraped off the Internet.
 
-In the past summer, I worked with Pinnacle Solutions, Inc.\footnote{For information, visit http://psiconsultants.com/}, a small company in Indianapolis, Indiana, that deals everything with data. My job was solely to develop web-scrapers. In this paper, I will provide an overview and a discussion of web-scraping, followed by a description of my internship experience.
+In the past summer, I worked with Pinnacle Solutions, Inc.\footnote{For information, visit http://psiconsultants.com/}, a company in Indianapolis, Indiana. My job was solely to develop web-scrapers. In this paper, I will provide an overview and discussion of web-scraping, followed by a description of my internship experience.
 
 \section{An Overview of Web-Scraping}
-In general, there are three basic ways to collect data: from primary resources, e.g., conducting surveys and studies; from secondary resources, e.g., databases like the U.S. Census; and from existing pieces of information, e.g., product reviews from \textit{Amazon.com}. Web-scraping focuses on the last way: to harvest data from a structured webpage, e.g., HTML\footnote{Abbreviation of HyperText Markup Language}, to a structured format, e.g.,  \textit{.json}\footnote{Abbreviation of JavaScript Object Notation} and \textit{.csv}\footnote{Abbreviation of Comma-Separated Values}. It provides an amalgamation of the deluge of data spread over websites.
+In general, there are three basic ways to collect data: from primary sources, e.g., conducting surveys and studies; from secondary sources, e.g., databases like the U.S. Census; and from existing but uncompiled information, e.g., product reviews from \textit{Amazon.com}. Web-scraping focuses on the last way: to harvest data from a structured webpage, e.g., HTML\footnote{Abbreviation of HyperText Markup Language}, to a structured format, e.g.,  \textit{.json}\footnote{Abbreviation of JavaScript Object Notation} and \textit{.csv}\footnote{Abbreviation of Comma-Separated Values}. It provides an amalgamation of the deluge of data spread over websites.
 
 \section{Usage of Web-Scraping}
 As web-scraping does not generate new data or results, it seems useless. However, people from various backgrounds may find web-scraping very useful. Here are few examples:
 
-If a student were to conduct a study on what lessons people learn from documentaries like \textit{“Food, Inc.”}, he/she could go to \textit{imdb.com}, \textit{amazon.com} and \textit{rottentomatoes.com} to scrape all the viewers’ reviews. As there are thousands of reviews for \textit{“Food, Inc.”}, web-scraping will help the student save much time trying to copy and paste every review. From the integrated results, the students might do a word frequency count to guess what kind of impression the majority have.
+If a student were to conduct a study on what lessons people learn from documentaries such as \textit{Food, Inc.}, he/she could go to \textit{imdb.com}, \textit{amazon.com} and \textit{rottentomatoes.com} to scrape all the viewers' reviews. As there are thousands of reviews for \textit{Food, Inc.}, web-scraping will help the student save much time trying to copy and paste every review. From the integrated results, the students might do a word frequency count to guess what kind of impression the majority have.
 
-If a company were to have launched a product, they could use web-scraping to monitor their product, their competitors’ products, and their partners’ products. If Amazon wants to know how successful is the new Kindle Fire HD, they can web-scrape all the reviews about Kindle Fire HD, about Nexus 7, and about Kindle Fire original version. Through analysis, Amazon is able to collect customer’s feedback promptly.
+If a company were to have launched a product, they could use web-scraping to monitor their product, their competitors' products, and their partners’ products. If Amazon wants to know how successful is the new Kindle Fire HD, they can web-scrape all the reviews about Kindle Fire HD, about Nexus 7, and about Kindle Fire original version. Through analysis, Amazon is able to collect customers' feedback promptly.
 
-If a civil service official were to monitor the price change of thousands of commodities, and if all these commodities are sold online, the official can use web-scraping to collect the prices. The scraper will just copy the price from the product page of a online retailer website, and paste all of them in a spreadsheet. The shift in prices may reflect inflation/deflation, and the data can be used in economic research.
+If a statistician were to monitor the price change of thousands of commodities, and if all these commodities are sold online, the official can use web-scraping to collect the prices. The scraper will just copy the prices from the product page of an online retailer website, and paste all of them in a spreadsheet. Shifts in prices may reflect inflation/deflation, and the data can be used in economic research.
 
-If a data analyst from Apple were to study how the public responds whenever a new product is released, he/she can collect the review dates from review websites and plot a frequency graph. The number of reviews generate per day may reflect how responsive the customers are to a new product.
+If a data analyst from Apple were to study how the public responds whenever a new product is released, he/she could collect the review dates from review websites and plot a frequency graph. The number of reviews generated per day may reflect how receptive the customers are to a new product.
 
 \section{Advantages of Web-Scraping}
 
-\subsection{Fast}
+\subsection{Speed}
 
-Web-scraping allows people to copy and paste from webpages faster. For instance, to harvest 10,000 pieces of Amazon.com product reviews by copying and pasting every little piece of information into an excel spreadsheet, doing it manually will take extended time and be prone to mistakes. Web-scraping technology, on the other hand, makes the process much faster. By specifying certain paths in the webpage structure, the spiders go into specific attributes and fields to crawl information. With the help of web-scraping, 10,000 reviews can be copied and pasted into a \textit{.csv} file within 15 minutes\footnote{The result is based on running of my own scraper}.
+Web-scraping allows people to copy and paste from webpages faster. For instance, to harvest 10,000 pieces of Amazon.com product reviews manually by copying and pasting every little piece of information into an excel spreadsheet, doing it manually would take a very long time and be prone to mistakes. Web-scraping technology, on the other hand, makes the process much faster. By specifying certain paths in the webpage structure, the spiders go into specific attributes and fields to crawl information. With the help of web-scraping, 10,000 reviews can be copied and pasted into a \textit{.csv} file within 15 minutes.\footnote{The result is based on running of my own scraper.}
 
-\subsection{Convenient for Data Analysis}
 
-Web-scraping improves the efficiency of data analysis. More often than not, tables of data are more ready to be processed than plain text. As web-scraping grabs from a structured format, it is able to copy and paste all the information needed into another structured format. For instance, after a \textit{.csv} file is generated by scraping data from Amazon product reviews, all cells in the  “ratings” column have a range of 1 to 5 for number of stars, all cells in the “review body” column will contain texts of the review bodies. A well-structured database will then provide foundation for further data mining and other modeling techniques.
 
-\subsection{Accessible}
+\subsection{Convenience for Data Analysis}
 
-Web-scraping is also increasingly accessible today. There are browser extensions like \textit{firebug} and \textit{iMacros}, programs like \textit{Wget}, programming languages like \textit{Perl}, \textit{Hadoop} and \textit{Java} which have libraries to support sending HTTP requests, and programming language extensions like \textit{Scrapy} and \textit{Beautiful Soup} for \textit{Python}. It is becoming more feasible for anyone to learn web-scraping, and to harvest data beyond what traditional ways like web API requests\footnote{requesting information through interacting with website's database} can offer.
+Web-scraping improves the efficiency of data analysis. More often than not, tables of data are more ready to be processed than plain text. As web-scraping grabs from a structured format, it is able to copy and paste all the information needed into another structured format. For instance, after a \textit{.csv} file is generated by scraping data from Amazon product reviews, all cells in the \textit{ratings} column have a range of 1 to 5 for number of stars, all cells in the \textit{review body} column will contain texts of the review bodies. A well-structured database will then provide foundation for further data mining and other modeling techniques.
 
-\section{Disadvantages of Web-Scraping}
+\subsection{Availability}
 
-\subsection{Legality}
+Web-scraping are being more widely available today. Popular tools for web-scraping include browser extensions like \textit{firebug} and \textit{iMacros}, programs like \textit{Wget}, programming languages like \textit{Perl}, \textit{Hadoop} and \textit{Java} which have libraries to support sending HTTP requests, and programming language extensions like \textit{Scrapy} and \textit{Beautiful Soup} for \textit{Python}. It is becoming more feasible for anyone to learn web-scraping, and to harvest data beyond what traditional ways like web API requests\footnote{requesting information through interacting with website's database} can offer.
 
-Web-scraping has been a disputable issue. While it is free to download many webpages, usage of the data within might not be in compliance with the terms and conditions of the source. Currently, there is no law forbidding web-scraping, nor is there any way to ban downloading of webpages(footnote needed, but I cannot find any law passages anyway… ). Lawsuits were fought between companies like American Airlines against FareChase (http://www.fornova.net/documents/AAFareChase.pdf ), but it is impossible to ban people from downloading webpages. Practically, people use free information with citations. Frankly, as activities beyond downloading the webpages are operated locally, it is very hard to track what information the user really scraped from. Therefore, there is a grey area in law and practice that people who use web-scraping tools find time and space to develop their projects.
+\section{Challengess of Web-Scraping}
+
+\subsection{Legality(extensive overhaul needed)}
+
+Web-scraping raises legal and ethical issues. While it is free to download many webpages, usage of the data within might not be in compliance with the terms and conditions of the source. Currently, there is no law forbidding web-scraping, nor is there any way to ban downloading of webpages(footnote needed, but I cannot find any law passages anyway… ). Lawsuits were fought between companies like American Airlines against FareChase (http://www.fornova.net/documents/AAFareChase.pdf ), but it is impossible to ban people from downloading webpages. Practically, people use free information with citations. Frankly, as activities beyond downloading the webpages are operated locally, it is very hard to track what information the user really scraped from. Therefore, there is a grey area in law and practice that people who use web-scraping tools find time and space to develop their projects.
 
 \subsection{Intricate and Dynamic Web Structures}
 
-As more advanced web structures emerge, scraping becomes more difficult. AJAX, for instance, sends out XMLHTTPRequest only when the user performs certain maneuvers on browser. Also, embedded JavaScript contents may not be downloaded. The advent of these dynamic ways of loading web contents brings new challenges to web-scraping.
+As more advanced web structures emerge, scraping becomes more difficult. AJAX, for instance, sends out XMLHTTPRequest only when the user performs certain maneuvers in the browser. Also, embedded JavaScript contents may not be downloaded. The advent of these dynamic ways of loading web contents brings new challenges to web-scraping. \textbf{CONSIDER THE IMPACT OF HTML 5}
+
 
 \subsection{Instability}
-Another underlying problem comes from the fact that web-scraping is based on webpage structure. If the website adds a few toolbars, the locations of HTML attributes will change, resulting in crash of the scraper. If the website has an unusual encoding for text, the scraper may crash, too. These potential problems manifest web-scraping’s intrinsic dependence of web interface.
+Another underlying problem comes from the fact that web-scraping is based on webpage structure. If the website adds a few toolbars, the locations of HTML attributes will change, resulting in crash of the scraper. If the website has an unusual encoding for text, the scraper may crash, too. These potential problems manifest web-scraping's intrinsic dependence on web interface.
 
 \chapter{My Internship}
 \section{Overview of My Internship at Pinnacle Solutions, Inc.}
-Pinnacle Solutions, Inc.(PSI) is a data company which helps clients to analyze and interpret their databases. Founded in 1996 by Kalamazoo College alumnus Donald Penix, Jr.(DJ), the company currently has over 20 employees, located in downtown Indianapolis, Indiana. PSI primarily uses \textit{SAS} and \textit{Futrix} \footnote{For more information, see Glossary of Terms} for processing data, and \textit{Amazon Web Service} for some server management.
+Pinnacle Solutions, Inc.(PSI) is a data company which helps clients to analyze and interpret their databases. Founded in 1996 by Kalamazoo College alumnus Donald Penix, Jr.(DJ), the companyi,located in downtown Indianapolis, Indiana, currently has over 20 employees. PSI primarily uses \textit{SAS} and \textit{Futrix} \footnote{For more information, see Glossary of Terms} for processing data, and \textit{Amazon Web Services} for some server management.
 
-I was a summer intern at PSI in 2011. At that time, DJ was very interested in sentiment analysis, a technology aims to discover and analyze sentiment. For instance, a comment like ``I love this iPad!" gives a positive sentiment, and one like ``I am sick of iPad!" gives a negative sentiment of iPad. Sentiment analysis will congregate related comments and analyze them, which involves data mining and natural language processing. After research, we found it not feasible, as none of the employees has the expertise in those. So we broke it down into sections, and data collection is the first step towards sentiment analysis.
+I was a summer intern at PSI in 2011. At that time, Mr. Penix was very interested in ``sentiment analysis'', a technology aims to discover and analyze sentiment reflected, for example, by comments, reviews, and blog posts. For instance, a comment like ``I love this iPad!" indicates a positive sentiment, and one like ``I am sick of the iPad!" suggests a negative sentiment. Sentiment analysis will consolidate related comments and analyze them using data mining and natural language processing. After research, we found it not feasible for PSI, as none of the employees currently have the needed expertise. So we decided to start from scratch, and data collection is the first step towards sentiment analysis.
 
 \section{How Web-Scraping Became the Best Option for PSI}
 
-Analysis of data starts from collection of them. In order to harvest usable data from the Internet, there are many ways other than web-scraping.
+Analysis of data starts from collection of them. In order to harvest usable data from the Internet, there are many ways other than web-scraping.\textbf{Probably ought to refer back to Section 1 where you introduced sources of data.}
 
-First, one can extract necessary information through web APIs. Many websites do have APIs available. Twitter, for instance, published a new version of API months ago. Through API, users can request information directly from the web’s database, and the data will be clean and formatted.(In Twitter’s case, \textit{.json} format.) However, to obtain more data, users may need to buy permit/license. Moreover, many websites may have limited information provided in their web APIs, or may not have APIs at all. In that case, even though users can view the data from the browser, they cannot download it through APIs. Therefore, for a small company, it might be expensive and insufficient to rely on APIs for data harvesting.
+First, one can extract necessary information through web APIs.\textbf{explanation of API needed!} Many websites offer APIs for developers to use to build applications. Twitter, for instance, published a new version of API months ago. Through API, users can request information directly from the webites database, and the data will be clean and formatted. Twitter, for instance, offers exportable data in \textit{.json} format.) However, to obtain more data, users may need to pay for them. Moreover, many websites may have limited information provided in their web APIs, or may not provide APIs at all. In that case, even though users can view the data from the browser, they cannot download it through APIs. Therefore, for a small company, it might be expensive and insufficient to rely on APIs for data harvesting.
 
-Second, there are available third-party scraping/data harvesting services. There are applications like \textit{Mozenda}\footnote{http://mozenda.com/}, and highly customizable services such as \textit{scrapinghub}\footnote{http://scrapinghub.com/}, \textit{GNIP}\footnote{http://gnip.com/}, and \textit{Open Amplify}\footnote{http://www.openamplify.com/}. However, these services are not cheap to obtain. Moreover, in the long run, as PSI needs more info from the Internet, the dependency on these services will be ever increasing. Therefore, as a data company, it would be a wise choice if PSI can come up with a low cost, independent system to fetch information that is so close yet so far from them. 
+Second, there are available third-party scraping/data harvesting services. There are applications like \textit{Mozenda}\footnote{http://mozenda.com/}, and highly customizable services such as \textit{scrapinghub}\footnote{http://scrapinghub.com/}, \textit{GNIP}\footnote{http://gnip.com/}, and \textit{Open Amplify}\footnote{http://www.openamplify.com/}. However, these services are not cheap to obtain. Moreover, in the long run, as PSI needs more information from the Internet, the dependency on these services will be ever increasing. Therefore, as a data company, it would be a wise choice if PSI could come up with a low cost, independent system to fetch information that is so close yet so far from them. 
 
-Third, as they are certified \textit{SAS} reseller, they could use a software called \textit{SAS Sentiment Analysis Studio}. However, this application is not only expensive, but also dependent on the web API. 
+Third, as they are a certified \textit{SAS} reseller, they could use the software \textit{SAS Sentiment Analysis Studio}. However, this application is not only expensive for clients to buy, but also dependent on the web API. 
 
-At end of the day, a free software capable of fetching data from the Internet was desirable, and web-scraping seemed most promising. Many web-scraping resources are free, so the cost of doing web-scraping is low. As many programming languages and their extensions are open sources, many people contribute to the library and trouble-shooting, so the technical support is very active.
+After many thorough discussion sessions, a free software capable of fetching data from the Internet was determined to be desirable, and web-scraping seemed most promising. Many web-scraping resources are free, so the cost of doing web-scraping is low. As many programming languages and their extensions are open sources, many people contribute to the library and trouble-shooting, so the technical support is very active.
 
-After some research, I chose Scrapy, a Python web-scraping framework for the job.
+After some research, I chose Scrapy, a Python web-scraping framework, for the job.
 
 \section{Scrapy, a Python Framework}
 
@@ -89,15 +100,15 @@ To quote from its website, "Scrapy is a fast high-level screen scraping and web 
 
 Scrapy depends not only on Python, but also few other libraries. Scrapy uses Twisted\footnote{http://twistedmatrix.com/trac/}, an event-driven networking engine, and Zope\footnote{http://zope2.zope.org/about-zope-2/what-is-zope-2}, a web application server framework. The installation guide can be found on Scrapy's website\footnote{http://doc.scrapy.org/en/latest/intro/install.html}.
 
-There are few basic ideas or classes in Scrapy framework.
+There are few basic ideas or classes in the Scrapy framework.
 
-First, spider. \textit{Spider.py} is responsible for going into the webpages and crawl data from then. At the very least, user needs to specify domain, starting url, and where in the webpage to crawl from. If the user wants to scrape from multiple tables or multiple pages, or even conditionally scrape from certain pages, he/she can define those in \textit{Spider.py}
+First, spider. \textit{Spider.py} is responsible for going into the webpages and crawling data from them. At the very least, the user needs to specify the domain, the starting url, and the location in the webpage from which to crawl. If the user wants to scrape from multiple tables or multiple pages, or even conditionally scrape from certain pages, he/she can define those in \textit{Spider.py}
 
-Second, items. \textit{Items.py} is a class specifing the column names in result. In the end, the result would be a table consisting of all the scraped data, and items defines what are they. Items in the same class will be in the same table.
+Second, items. \textit{Items.py} is a class specifing the column names in the result. In the end, the result would be a table consisting of all the scraped data, and items defines what are they. Items in the same class will be in the same table.
 
-Third, settings. \textit{Settings.py} includes information such as what info will be written into the log file, limit on frequency of requests sent, and other customizable features. In the event of a user login is needed, the user can pre-fill that in the login to avoid access denial.
+Third, settings. \textit{Settings.py} includes information such as what information will be written into the log file, limit on frequency of requests sent, and other customizable features. In the event of a user login is needed, the user can pre-fill that in the login to avoid access denial.
 
-Forth, pipeline. \textit{Pipelines.py} decides how the scraped data are processed. By default, all data will be dumped in a single file. However, if the user wants to add a filter to get rid of some data, pipeline handles that. If the user wants to split the results from one spider into two seperate files, he/she can do that through coding in \textit{pipelines.py}.
+Fourth, pipeline. \textit{Pipelines.py} decides how the scraped data are processed. By default, all data will be dumped into a single file. However, if the user wants to add a filter to get rid of some data, pipeline handles that. If the user wants to split the results from one spider into two separate files, he/she can do that through coding in \textit{pipelines.py}.
 
 Scrapy has more advanced features, which would fall outside of the scope of this paper. In the next chapter, I would like to offer a high level approach of web-scraping using Scrapy.
 
@@ -116,7 +127,7 @@ A browser window opens and shows you what the website is like in Scrapy's perspe
 \\
 \includegraphics[width=0.5\textwidth]{amazon_scrapy_view.png}
 \includegraphics[width=0.5\textwidth]{amazon_normal_view.png}
-What scrapy is able to download locally V.S. what the user can see.
+What scrapy is able to download locally versus what the user can see.
 \section{Test If the Data is Scrapable}
 While in theory, any data can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that optimistic. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embeded \textit{JavaScript} code, getting the result of a function call will be more difficult.
 
@@ -131,7 +142,47 @@ After knowing a specific XPath, one can write related code to test if Scrapy can
 
 \section{Iterators}
 
-Web-scraping relies heavily on the structure of the webpage. If the webpage is very organize, it is possible for the user to use XPath to find all entries in a table, and send out request to scrape the next page.  
+Web-scraping relies heavily on the structure of the webpage. If the webpage is very organized, it is possible for the user to use XPath to find all entries in a table, and send out request to scrape the next page. In Scrapy, the request is in the form of a callback function. The spider will scrape the data yield the results from the page, and then excute the callback function. Here is a snippet of that concept:
+\begin{lstlisting}
+class Spider(BaseSpider):
+	def parse(self,response):
+	##some code to extract data from this current page
+		yield reslts_from_this_page
+		if next_page:
+			yield Request(url_of_the_next_page,callback=self.parse)
+\end{lstlisting}
+
+In the code above, \textit{BaseSpider} is one of the spider classes the user has to inherit to build a user-defined spider. In any spider class, a method like \textit{parse(self,response)} is necessary to communicate with the computer and instruct which fields in the html to scrape from. The \textit{parse} method yields a generator, and the code does not necessarily end there. In the even that there is a next page with the same html format, the parse method will be able to go into the new html webpage and collect the new data in the same way as it did for the previous page. Therefore, the method \textit{parse} can also yield a \textit{Request}. \textit{Request} represents HTTPRequest in many case. It sends a signal to the scraper and asks for a \textit{Response}, which will be handed to spider and the spider will scrape it.
+
+\section{Specification}
+
+After sketching and testing the basic functionalities, it is time to study what types of information the clients want, and what types of information is needed to make management of database easier. 
+
+The clients usually ask for specific data that are useful to their research. For instance, an author may want to read all his books' reviews. To collect book reviews from websites such as \textit{amazon.com} and \textit{goodreads.com}, we need different spiders for different websites, but potentially generate tables with identical column names so that the author and view everything in one sheet. That datasheet may contain book name, edition number, publisher, review website, user name of the reviewer, date of review, ratings, review bodies, and other information as the column names.
+
+On the developer's end, however, the structure will be very different. To track every piece of review, the developer may need a column with the url that particular review was pulled from. To establish an iterator, the developer may need to track the book identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer need to customize every spider to suit its respective website.
+
+(More examples are on the way)
+
+\section{Produce a sample output}
+
+After studying what and how the spider should scrape from webpages, we are ready to produce a sample output. The sample output is necessary for three reasons.
+
+First, formatting and encoding. It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. For instance, due to the fact that most websites are written in utf-8, but Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it.(code snippets and examples on their way).
+
+Second, communication with clients and manager. Only when the sample data sheet is out, can the results of scraping be evaluted. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time of producing a sample output influences the frequency of running the scraper. In the event that the target website restricts IP adress from visiting it too fast, the time taken to scrape data will definitely be longer than expected.
+
+Third, testing. As web-scraping is based on web structure and HTTP requests, it is unstable by nature. Although the code may work perfectly in theory, it may encounter problems in practice. These problem may be relevant to Internet connection, broadband width, geographic locatin, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out request and receive responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments on the code.
+
+\section{Customization}
+
+After the sample output seems qualified, the developer may consider other functionalities which may enhance the utility of a particular scraper. 
+
+For instance, to efficiently scrape updated reviews from a website, one can build a last page tracker. If a product has 50 pages of reviews on day 1, one can view the reviews by ascending date order so that the latest review appears on the last page. After the scraper scrapes the 50 pages on day 1, it store the last page as 50, so that when there are 60 pages on day 2, the scraper can start scraping from page 50 to 60, without re-scraping the first 49 pages.
+
+For another instance, one can make the scraper more interactive with the user. One can use Pipeline to save the output data into a user specified directory. For some scraping job like product reviews, it is also possible to ask for an identifier of the product, and the scraping process will start from an auto-generated url.
+
+\chapter{Future Developement of the Project}
 
 Glossary of Terms
 
@@ -164,14 +215,6 @@ spider
 scraper
 
 web-scraping
-
-
-
-
-
-
-
-
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  17 OCT 2013 04:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  24 OCT 2013 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -102,6 +102,9 @@ Package: `setspace' 6.7 <2000/12/01>
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
 (./SIP_draft_1.aux)
 \openout1 = `SIP_draft_1.aux'.
 
@@ -184,9 +187,9 @@ e
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 14.
+(Font)              <14.4> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
+(Font)              <7> on input line 22.
  [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -197,102 +200,108 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-)
+ [1
+
+])
 \tf@toc=\write3
 \openout3 = `SIP_draft_1.toc'.
 
- [1
-
-] [2]
+ [2]
 Chapter 1.
-Missing character: There is no Ò in font cmr12!
-Missing character: There is no Ó in font cmr12!
-Missing character: There is no Ò in font cmr12!
-Missing character: There is no Ó in font cmr12!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 23.
+(Font)              <5> on input line 31.
 [3
 
 ]
-Missing character: There is no Ò in font cmti12!
-Missing character: There is no Ó in font cmti12!
 Missing character: There is no Õ in font cmr12!
-Missing character: There is no Ò in font cmti12!
-Missing character: There is no Ó in font cmti12!
-Missing character: There is no Õ in font cmr12!
-Missing character: There is no Õ in font cmr12!
-Missing character: There is no Õ in font cmr12!
- [4]
-Missing character: There is no Ò in font cmr12!
-Missing character: There is no Ó in font cmr12!
-Missing character: There is no Ò in font cmr12!
-Missing character: There is no Ó in font cmr12!
- [5]
+ [4] [5]
 Missing character: There is no É in font cmr12!
- [6]
-Missing character: There is no Õ in font cmr12!
- [7]
+ [6] [7]
 Chapter 2.
 [8
 
-]
-Missing character: There is no Õ in font cmr12!
-Missing character: There is no Õ in font cmr12!
- [9] [10] [11]
+] [9] [10] [11]
 Chapter 3.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 119.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 <amazon_scrapy_view.png, id=47, 1284.8pt x 803.0pt>
 File: amazon_scrapy_view.png Graphic file (type png)
 
 <use amazon_scrapy_view.png>
-Package pdftex.def Info: amazon_scrapy_view.png used on input line 117.
+Package pdftex.def Info: amazon_scrapy_view.png used on input line 128.
 (pdftex.def)             Requested size: 234.8775pt x 146.78827pt.
 
 <amazon_normal_view.png, id=48, 1284.8pt x 803.0pt>
 File: amazon_normal_view.png Graphic file (type png)
 
 <use amazon_normal_view.png>
-Package pdftex.def Info: amazon_normal_view.png used on input line 118.
+Package pdftex.def Info: amazon_normal_view.png used on input line 129.
 (pdftex.def)             Requested size: 234.8775pt x 146.78827pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--120
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 115--120
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 126--131
 [] []
  []
 
 [12
 
-] <XPath_example.png, id=53, 1284.8pt x 803.0pt>
+] <XPath_example.png, id=54, 1284.8pt x 803.0pt>
 File: XPath_example.png Graphic file (type png)
  <use XPath_example.png>
-Package pdftex.def Info: XPath_example.png used on input line 126.
+Package pdftex.def Info: XPath_example.png used on input line 137.
 (pdftex.def)             Requested size: 469.75502pt x 293.5888pt.
 
-[13 <./amazon_scrapy_view.png> <./amazon_normal_view.png>] [14 <./XPath_example
-.png>] [15] (./SIP_draft_1.aux) ) 
+[13 <./amazon_scrapy_view.png> <./amazon_normal_view.png>]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 147.
+ [14 <./XPath_example.png>]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 149.
+ [15]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 171.
+
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 171.
+
+[16] [17]
+Chapter 4.
+[18
+
+] (./SIP_draft_1.aux) ) 
 Here is how much of TeX's memory you used:
- 2832 strings out of 493633
- 41491 string characters out of 3143378
- 118035 words of memory out of 3000000
- 6108 multiletter control sequences out of 15000+200000
- 9761 words of font info for 34 fonts, out of 3000000 for 9000
+ 2909 strings out of 493633
+ 42767 string characters out of 3143378
+ 129362 words of memory out of 3000000
+ 6169 multiletter control sequences out of 15000+200000
+ 11408 words of font info for 40 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 38i,8n,40p,906b,895s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti12.pfb>
-Output written on SIP_draft_1.pdf (16 pages, 1534018 bytes).
+ 38i,8n,40p,910b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base
+/8r.enc}</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/201
+1/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on SIP_draft_1.pdf (19 pages, 1576766 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
