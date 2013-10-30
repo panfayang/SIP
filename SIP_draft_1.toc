@@ -23,3 +23,5 @@
 \contentsline {chapter}{\numberline {4}Future Developement of the Project}{18}
 \contentsline {section}{\numberline {4.1}Natural Lanuage Toolkit}{18}
 \contentsline {section}{\numberline {4.2}Data Mining}{19}
+\contentsline {section}{\numberline {4.3}Graphic User Interface}{20}
+\contentsline {chapter}{Appendices}{21}

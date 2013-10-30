@@ -5,6 +5,7 @@
 \usepackage{setspace}
 \usepackage{fullpage}
 \usepackage{courier}
+\usepackage[toc,page]{appendix}
 \doublespacing
 \begin{document}
 \lstset{language=Python,
@@ -184,10 +185,10 @@ For another instance, one can make the scraper more interactive with the user. O
 
 \chapter{Future Developement of the Project}
 
-After harvesting data from online sources, there are various ways to enjoy the fruit. This chapter will illustrate some of possible ways to use the data.
-
 
 \section{Natural Lanuage Toolkit}
+After harvesting data from online sources, there are various ways to enjoy the fruit. This chapter will illustrate some of possible ways to use the data.
+
 
 NLTK, the abbreviation for ``Natural Language Toolkit'', is ``a leading platform for building Python programs to work with human language data.''\footnote{quote from http://nltk.org} This toolkit has many functions, and one of them is tokenization. Tokenizatio is the process of breaking up a paragraph into sentences, a sentence into phrases, a phrase to words, or even a word to its components. These subsets are called tokens, and more study can be done through analyzing these tokens.
 
@@ -201,8 +202,22 @@ Second, the complexity of language. Short statements such as ``This product is g
 
 \section{Data Mining}
 
-As  
+I have no idea how to write this part\ldots I have covered this somewhat in the advantages of web-scraping, so I don't know if it is necessary to write that in greater details.
 
+\section{Graphic User Interface}
+
+For future development of web-scraping, it is possible to build an user interface from the code. 
+
+To scrape information related to a particular item, the user can choose a website to scrape from, and input necessary fields such as the unique identifier of that item in the website. Then, the user can choose from a checklist of what areas to scrape from, and the number of results shown. Then, after clicking a button, the Python script at the backend will use Scrapy to retrieve the input information, create starting and ending urls, and scrape selected results from relevant pages.
+
+However, there are few limitations of establishing an interface.
+
+First, validity of user input. As the backend Python script retrieves information from the user interface, invalid input may cause the program to stop functioning.
+
+Second, constantly changing web interfaces. As web-scraping depends heavily on web structures, in the event of a change in web interfaces, the spider will probably fail to crawl information. Therefore, both the programmer and the user need to update frequently. The stability of the software will be very fragile.
+
+\newpage
+\begin{appendices}
 Glossary of Terms
 
 Ajax, JavaScript
@@ -237,5 +252,5 @@ web-scraping
 
 
 
-
+\end{appendices}
 \end{document}
