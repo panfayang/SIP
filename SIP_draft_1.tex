@@ -195,9 +195,13 @@ For instance, if a product manager would like to monitor the sentiment of custom
 
 However, there are few challenges in the process of detecting sentiment. 
 
-First, the ambiguity of language. Same word may have different meanings in different context. For instance, in the review of a product, ``I am sick of it'' and ``This product is sick!'' have opposite sentiment, but they both use the word ``sick'' to express the sentiment. As the internet language becomes increasingly versatile, with slangs, emoticons, puns, and other forms of language in the scraped text, the difficulty of guessing the right sentiment of an expression increases drastically.
+First, the ambiguity of language. Same word may have different meanings in different context. For instance, in the review of a product, ``I am sick of it'' and ``This product is sick!'' have opposite sentiments, but they both use the word ``sick'' to express the sentiment. As the internet language becomes increasingly versatile, with slangs, emoticons, puns, and other forms of language in the scraped text, the difficulty of guessing the right sentiment of an expression increases drastically.
 
-Second, 
+Second, the complexity of language. Short statements such as ``This product is great!'' or ``I hate it!'' are generally easier for sentiment detection. As the statement becomes longer into a complex sentence, a paragraph or even multiple paragraphs, the evaluation of a certain review becomes more complicated, too. For instance, for a review such as ``Though this product may not be the worst in the world, please choose other products if possible.'', it seems obvious to human that the sentence contains negative sentiment against the product. To the computer, however, when it sees ``not'' followed by ``worst'', it may assign a very positive sentiment to this review.
+
+\section{Data Mining}
+
+As  
 
 Glossary of Terms
 
