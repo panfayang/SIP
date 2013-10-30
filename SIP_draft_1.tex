@@ -130,7 +130,7 @@ A browser window opens and shows you what the website is like in Scrapy's perspe
 \includegraphics[width=0.5\textwidth]{amazon_normal_view.png}
 What scrapy is able to download locally versus what the user can see.
 \section{Test If the Data is Scrapable}
-While in theory, any data can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that optimistic. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embeded \textit{JavaScript} code, getting the result of a function call will be more difficult.
+While in theory, any data which can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that ideal. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embedded \textit{JavaScript} code, getting the result of a function call will be more difficult.
 
 After setting up a project with few commands\footnote{For more information, visit http://doc.scrapy.org/en/latest/intro/tutorial.html. The website has a simple example on how to start a project}, it is wise to test if certain data are scrapable. Before knowing that, one needs to specify where exactly the data are located. To establish a standard way of referring to a certain field in the webpage, XPath\footnote{Abbreviation of ``XML Path Language''.For more information, see http://www.w3.org/TR/xpath/} is used.
 
@@ -139,11 +139,11 @@ To retrieve a certain XPath, one can use an built-in \textit{``Inspect Element''
 
 And the XPath of the link is \textit{//*[@id=``cell1'']/div[8]/div/div/h6/a}.
 
-After knowing a specific XPath, one can write related code to test if Scrapy can recognize the XPath and scrape the data.If one piece of data is scrapable, it is likely that the entire table that piece is located, can be scraped. If the table is scrapable, it is also likely that similar tables can be scraped, too.
+After knowing a specific XPath, one can write related code to test if Scrapy can recognize the XPath and scrape the data.If one piece of data is scrapable, it is likely that the entire table which contains that piece of data can be scraped. If the table is scrapable, it is also likely that similar tables can be scraped, too.
 
 \section{Iterators}
 
-Web-scraping relies heavily on the structure of the webpage. If the webpage is very organized, it is possible for the user to use XPath to find all entries in a table, and send out request to scrape the next page. In Scrapy, the request is in the form of a callback function. The spider will scrape the data yield the results from the page, and then excute the callback function. Here is a snippet of that concept:
+Web-scraping relies heavily on the structure of the webpage. If the webpage is very organized, it is possible for the user to use XPath to find all entries in a table, and send out a request to scrape the next page. In Scrapy, the request is in the form of a callback function. The spider will scrape the data yield the results from the page, and then excute the callback function. Here is a snippet of that concept:
 \begin{lstlisting}
 class Spider(BaseSpider):
 	def parse(self,response):
@@ -153,15 +153,15 @@ class Spider(BaseSpider):
 			yield Request(url_of_the_next_page,callback=self.parse)
 \end{lstlisting}
 
-In the code above, \textit{BaseSpider} is one of the spider classes the user has to inherit to build a user-defined spider. In any spider class, a method like \textit{parse(self,response)} is necessary to communicate with the computer and instruct which fields in the html to scrape from. The \textit{parse} method yields a generator, and the code does not necessarily end there. In the even that there is a next page with the same html format, the parse method will be able to go into the new html webpage and collect the new data in the same way as it did for the previous page. Therefore, the method \textit{parse} can also yield a \textit{Request}. \textit{Request} represents HTTPRequest in many case. It sends a signal to the scraper and asks for a \textit{Response}, which will be handed to spider and the spider will scrape it.
+In the code above, \textit{BaseSpider} is one of the spider classes the user has to inherit to build a user-defined spider. In any spider class, a method like \textit{parse(self,response)} is necessary to communicate with the computer and instruct which fields in the html to scrape from. The \textit{parse} method yields a generator, and the code does not necessarily end there. In the event that there is a next page with the same html format, the parse method will be able to go into the new html webpage and collect the new data in the same way as it did for the previous page. Therefore, the method \textit{parse} can also yield a \textit{Request}. \textit{Request} represents an HTTPRequest in many case. It sends a signal to the scraper and asks for a \textit{Response}, which will be handed to the spider and the spider will scrape it.
 
 \section{Specification}
 
-After sketching and testing the basic functionalities, it is time to study what types of information the clients want, and what types of information is needed to make management of database easier. 
+After sketching and testing the basic functionalities, it is time to study what types of information the clients want, and what types of information are needed to make database management easier. 
 
-The clients usually ask for specific data that are useful to their research. For instance, an author may want to read all his books' reviews. To collect book reviews from websites such as \textit{amazon.com} and \textit{goodreads.com}, we need different spiders for different websites, but potentially generate tables with identical column names so that the author and view everything in one sheet. That datasheet may contain book name, edition number, publisher, review website, user name of the reviewer, date of review, ratings, review bodies, and other information as the column names.
+The clients usually ask for specific data that are useful to their research. For instance, an author may want to read all of his books' reviews. To collect book reviews from websites such as \textit{amazon.com} and \textit{goodreads.com}, we need different spiders for different websites, but potentially generate tables with identical column names so that the author can view everything in one sheet. That datasheet may contain book name, edition number, publisher, review website, user name of the reviewer, date of review, ratings, review bodies, and other information as the column names.
 
-On the developer's end, however, the structure will be very different. To track every piece of review, the developer may need a column with the url that particular review was pulled from. To establish an iterator, the developer may need to track the book identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer need to customize every spider to suit its respective website.
+On the developer's end, however, the structure will be very different. To track every piece of review, the developer may need a column with the url from which that particular review was pulled. To establish an iterator, the developer may need to track the book identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer needs to customize every spider to suit its respective website.
 
 (More examples are on the way)
 
@@ -173,7 +173,9 @@ First, formatting and encoding. It is not unusual when the ideal is far from rea
 
 Second, communication with clients and manager. Only when the sample data sheet is out, can the results of scraping be evaluted. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time of producing a sample output influences the frequency of running the scraper. In the event that the target website restricts IP adress from visiting it too fast, the time taken to scrape data will definitely be longer than expected.
 
-Third, testing. As web-scraping is based on web structure and HTTP requests, it is unstable by nature. Although the code may work perfectly in theory, it may encounter problems in practice. These problem may be relevant to Internet connection, broadband width, geographic locatin, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out request and receive responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments on the code.
+After harvesting data from online sources, there are various ways to enjoy the fruit. This chapter will illustrate some of possible ways to use the data.
+
+Third, testing. As web-scraping is based on web structure and HTTP requests, it is unstable by nature. Although the code may work perfectly in theory, it may encounter problems in practice. These problem may be relevant to Internet connection, broadband width, geographic locatin, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receive responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments on the code.
 
 \section{Customization}
 
