@@ -184,10 +184,20 @@ For another instance, one can make the scraper more interactive with the user. O
 
 \chapter{Future Developement of the Project}
 
+After harvesting data from online sources, there are various ways to enjoy the fruit. This chapter will illustrate some of possible ways to use the data.
 
 
+\section{Natural Lanuage Toolkit}
 
+NLTK, the abbreviation for ``Natural Language Toolkit'', is ``a leading platform for building Python programs to work with human language data.''\footnote{quote from http://nltk.org} This toolkit has many functions, and one of them is tokenization. Tokenizatio is the process of breaking up a paragraph into sentences, a sentence into phrases, a phrase to words, or even a word to its components. These subsets are called tokens, and more study can be done through analyzing these tokens.
 
+For instance, if a product manager would like to monitor the sentiment of customers on the product, he/she could use web-scraping to collect review texts from online rating websites. Although those texts are available, the feedback from the reviews are not quantitative. With NLTK, however, one can tokenize each review into sentences, and sentences into phrases. For example, one can assign a score of ``1'' if the review says ``I hate this product!'', and a score of ``10'' if the review reads ``I love this product!''. There are databases such as WordNet available for download as a package for NLTK, and there are algorithms for assigning scores to words.
+
+However, there are few challenges in the process of detecting sentiment. 
+
+First, the ambiguity of language. Same word may have different meanings in different context. For instance, in the review of a product, ``I am sick of it'' and ``This product is sick!'' have opposite sentiment, but they both use the word ``sick'' to express the sentiment. As the internet language becomes increasingly versatile, with slangs, emoticons, puns, and other forms of language in the scraped text, the difficulty of guessing the right sentiment of an expression increases drastically.
+
+Second, 
 
 Glossary of Terms
 
@@ -220,6 +230,8 @@ spider
 scraper
 
 web-scraping
+
+
 
 
 \end{document}
