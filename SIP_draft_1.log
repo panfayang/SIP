@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  1 NOV 2013 00:36
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  5 NOV 2013 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -288,10 +288,10 @@ Chapter 4.
 
 ] [22] (./SIP_draft_1.aux) ) 
 Here is how much of TeX's memory you used:
- 3007 strings out of 493633
- 44203 string characters out of 3143378
+ 3006 strings out of 493633
+ 44187 string characters out of 3143378
  130729 words of memory out of 3000000
- 6264 multiletter control sequences out of 15000+200000
+ 6263 multiletter control sequences out of 15000+200000
  11408 words of font info for 40 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  38i,8n,40p,910b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -307,7 +307,7 @@ fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 usr/local/texlive/2011/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loca
 l/texlive/2011/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
 e/2011/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on SIP_draft_1.pdf (23 pages, 1581955 bytes).
+Output written on SIP_draft_1.pdf (23 pages, 1582401 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
