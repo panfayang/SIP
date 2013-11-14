@@ -22,6 +22,7 @@ showstringspaces=false}
 \date{\today}
 \maketitle
 \tableofcontents
+\listoffigures
 
 
 \chapter{An Evaluation of Web-Scraping}
@@ -116,7 +117,7 @@ Scrapy has more advanced features, which would fall outside of the scope of this
 \chapter{Scrapy Explained in Greater Detail}
 
 \section{Test How Much You Can See}
-Web-scraping depends on whatever the browser can "see", and there are times when the browser sees less than a person does. To check, one can use the following line of code in cmd/terminal 
+Web-scraping depends on whatever the browser can "see", and there are times when the browser sees less than a person does. To check, one can use the following line of code in the command-line (cmd.exe in Windows, Terminal in Mac OS/Linux): 
 \begin{lstlisting}
 scrapy shell http://amazon.com
 \end{lstlisting}
@@ -126,18 +127,23 @@ view(response)
 \end{lstlisting} 
 A browser window opens and shows you what the website is like in Scrapy's perspective.\\
 \\
+\begin{figure}[htp]
 \includegraphics[width=0.5\textwidth]{amazon_scrapy_view.png}
 \includegraphics[width=0.5\textwidth]{amazon_normal_view.png}
-What scrapy is able to download locally versus what the user can see.
+\caption[Comparison of views]
+{What scrapy is able to download locally versus what the user can see.}
+\end{figure}
 \section{Test If the Data is Scrapable}
 While in theory, any data which can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that ideal. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embedded \textit{JavaScript} code, getting the result of a function call will be more difficult.
 
 After setting up a project with few commands\footnote{For more information, visit http://doc.scrapy.org/en/latest/intro/tutorial.html. The website has a simple example on how to start a project}, it is wise to test if certain data are scrapable. Before knowing that, one needs to specify where exactly the data are located. To establish a standard way of referring to a certain field in the webpage, XPath\footnote{Abbreviation of ``XML Path Language''.For more information, see http://www.w3.org/TR/xpath/} is used.
 
 To retrieve a certain XPath, one can use an built-in \textit{``Inspect Element''} tool, or an extension such as \textit{firebug}\footnote{Visit http://getfirebug.com/ for more information}, available for \textit{Firefox} and \textit{Google Chrome}. Here is an example using \textit{``Inspect Element''} in \textit{Google Chrome} to extract an XPath from \textit{http://www.nbcnews.com}:\\
+\begin{figure}[htp]
 \includegraphics[width=\textwidth]{XPath_example.png}
-
-And the XPath of the link is \textit{//*[@id=``cell1'']/div[8]/div/div/h6/a}.
+\caption[How to extract XPath]
+{A screenshot of how to obtain an XPath from a webpage, and the XPath of the link is \textit{//*[@id=``cell1'']/div[8]/div/div/h6/a}.}
+\end{figure}
 
 After knowing a specific XPath, one can write related code to test if Scrapy can recognize the XPath and scrape the data.If one piece of data is scrapable, it is likely that the entire table which contains that piece of data can be scraped. If the table is scrapable, it is also likely that similar tables can be scraped, too.
 
@@ -210,8 +216,7 @@ While it seems feasible to operate data mining under many collectable variables,
 
 First, limitation of parsing. The default format of scraped data is string, but more often than not, numbers are preferred in data mining. The process of parsing numbers from their string representations may incur errors.
 
-Second, limitation of accessible data. Websites are not likely to display some data, such as demographic data, to the public. To investigate possible reasons 
-
+Second, limitation of accessible data. Websites are not likely to display some data, such as demographic data, to the public. To investigate possible correlations, insufficient data will be available for scraping.
 
 
 \section{Graphic User Interface}
@@ -262,14 +267,5 @@ scraper
 
 web-scraping
 
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
 \end{appendices}
->>>>>>> 2e6b40974acd299d53ea30a437511263ef1ca12d
 \end{document}
