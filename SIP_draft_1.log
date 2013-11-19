@@ -1,14 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.11.14)  19 NOV 2013 02:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  19 NOV 2013 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **SIP_draft_1.tex
 (./SIP_draft_1.tex
-LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 2 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,39 +34,39 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count89
 \lst@gtempboxa=\box26
 \lst@token=\toks15
@@ -70,31 +80,32 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count94
 \lst@maxwidth=\dimen108
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/07/10 1.5 (Carsten Heinz)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count95
 \lst@skipnumbers=\count96
 \lst@framebox=\box27
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2013/06/27 1.5pre1 listings configuration
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
-Package: listings 2013/07/10 1.5 (Carsten Heinz)
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count97
 \c@@ppsavesec=\count98
@@ -116,7 +127,7 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count100
 \scratchdimen=\dimen109
@@ -129,15 +140,14 @@ LaTeX Font Info:    ... okay on input line 10.
 \MPnumerator=\count104
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks17
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -146,23 +156,23 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
@@ -173,14 +183,14 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count106
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/06/27 1.5pre1 listings language file
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 23.
@@ -188,7 +198,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 23.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./SIP_draft_1.toc
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./SIP_draft_1.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -201,8 +212,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `SIP_draft_1.toc'.
 
- [2]
-(./SIP_draft_1.lof)
+ [2] (./SIP_draft_1.lof)
 \tf@lof=\write4
 \openout4 = `SIP_draft_1.lof'.
 
@@ -214,11 +224,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 33.
 [4
 
-]
-Missing character: There is no Õ in font cmr12!
- [5] [6]
-Missing character: There is no É in font cmr12!
- [7] <lindt_chrome.png, id=35, 1284.8pt x 803.0pt>
+] [5] [6] [7] <lindt_chrome.png, id=35, 1284.8pt x 803.0pt>
 File: lindt_chrome.png Graphic file (type png)
 
 <use lindt_chrome.png>
@@ -243,7 +249,7 @@ Chapter 2.
 Chapter 3.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 129.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 <amazon_scrapy_view.png, id=53, 1284.8pt x 803.0pt>
@@ -286,13 +292,13 @@ LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
  [16]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 186.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
- [17]
-[18] [19]
+
+[17] [18] [19]
 Chapter 4.
 [20
 
@@ -301,25 +307,26 @@ Chapter 4.
 
 ] [24] (./SIP_draft_1.aux) ) 
 Here is how much of TeX's memory you used:
- 3049 strings out of 495031
- 44540 string characters out of 6181530
- 130741 words of memory out of 5000000
- 6208 multiletter control sequences out of 15000+600000
- 11408 words of font info for 40 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 38i,8n,40p,910b,976s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base
-/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on SIP_draft_1.pdf (25 pages, 2113738 bytes).
+ 3019 strings out of 493633
+ 44426 string characters out of 3143378
+ 130729 words of memory out of 3000000
+ 6271 multiletter control sequences out of 15000+200000
+ 11408 words of font info for 40 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 38i,8n,40p,909b,976s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips
+/base/8r.enc}</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on SIP_draft_1.pdf (25 pages, 2113561 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
