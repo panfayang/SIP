@@ -16,12 +16,12 @@
 \contentsline {chapter}{\numberline {3}Scrapy Explained in Greater Detail}{13}
 \contentsline {section}{\numberline {3.1}Test How Much You Can See}{13}
 \contentsline {section}{\numberline {3.2}Test If the Data is Scrapable}{14}
-\contentsline {section}{\numberline {3.3}Iterators}{15}
-\contentsline {section}{\numberline {3.4}Specification}{16}
+\contentsline {section}{\numberline {3.3}Iterators}{16}
+\contentsline {section}{\numberline {3.4}Specification}{17}
 \contentsline {section}{\numberline {3.5}Produce a sample output}{17}
 \contentsline {section}{\numberline {3.6}Customization}{18}
-\contentsline {chapter}{\numberline {4}Future Developement of the Project}{19}
-\contentsline {section}{\numberline {4.1}Natural Lanuage Toolkit}{19}
-\contentsline {section}{\numberline {4.2}Data Mining}{20}
-\contentsline {section}{\numberline {4.3}Graphic User Interface}{21}
-\contentsline {chapter}{Appendices}{22}
+\contentsline {chapter}{\numberline {4}Future Developement of the Project}{20}
+\contentsline {section}{\numberline {4.1}Natural Lanuage Toolkit}{20}
+\contentsline {section}{\numberline {4.2}Data Mining}{21}
+\contentsline {section}{\numberline {4.3}Graphic User Interface}{22}
+\contentsline {chapter}{Appendices}{23}
