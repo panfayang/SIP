@@ -1,7 +1,9 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Comparison of same url in different browsers}}{8}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Comparison of same url in different browsers}}{10}{figure.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Comparison of views}}{14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces How to extract XPath}}{15}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Comparison of views}}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces How to extract XPath}}{18}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Scrapy screenshot in Mac Terminal}}{21}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sample csv output}}{22}{figure.3.4}
 \addvspace {10\p@ }

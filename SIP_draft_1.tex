@@ -1,4 +1,5 @@
 \documentclass[12pt]{report}
+\usepackage{comment}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{indentfirst}
@@ -7,6 +8,41 @@
 \usepackage{courier}
 \usepackage[toc,page]{appendix}
 \doublespacing
+\usepackage{hyperref}
+\usepackage{index}
+\usepackage[nopostdot]{glossaries}
+\makeglossaries
+
+\newglossaryentry{ajax}{name={AJAX},description={Asynchronous JavaScript and XML. To quote from w3schools, ``AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.'' For more information, visit \url{http://www.w3schools.com/ajax/ajax\_intro.asp}}}
+
+\newglossaryentry{api}{name={API},description={Application Programming Interface. It defines and explains how users can use components of a program. A web's API usually guides users into permitted ways of extracting information from its database.}}
+
+\newglossaryentry{bi}{name={Business Intelligence},description={technologies to congregate data for business analysis.}}
+
+\newglossaryentry{crawl}{name={crawl},description={the process of downloading webpages and copy certain information from them.}}
+
+\newglossaryentry{csv}{name={csv}, description={Comma-Separated Values, a plain text form of tabulated data. Entries in the same row are separated by commas,(sometimes pipelines or other characters) and columns are separated by newlines.}}
+
+\newglossaryentry{json}{name={json}, description={JavaScript Object Notation, a human-readable format for storing data. It consists mostly of name/value pairs, so different parts of a data table will be easily recognized by their names.}}
+
+\newglossaryentry{xml}{name={XML}, description={Extensible Markup Language, a markup language aiming to be both human-readable and machine-readable. It has tags illustrating the proceding values.}}
+
+\newglossaryentry{harvest}{name={harvest}, description={Data Harvesting, the automated process of gathering and organizing data.}}
+
+\newglossaryentry{mining}{name={Data Mining}, description={The practice of searching through large amounts of computerized data to find useful patterns or trends. (Definition from Merriam-Webster)}}
+
+\newglossaryentry{ende}{name={encoding and decoding}, description={The conversion between elements of a certain language and numbers and texts. For instance, the character ``A'' is encoded as ``0X41'' in UTF-8 hex format, and ``01110001'' in UTF-8 binary format decodes to the character ``q''.}} 
+
+\newglossaryentry{http}{name={HTTP Request},description={A message sent from the client to the server through actions such as clicking a button on a webpage, asking for information. The server will examine the message, and send a response message back to the client.}}
+
+\newglossaryentry{xmlhttp}{name={XMLHTTPRequest},description={A JavaScript object. It provides an easy way to retrieve data from a URL without having to do a full page refresh,  allowing the response to be loaded within the script.\\(From \url{https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest}) }}
+
+\newglossaryentry{js}{name={JavaScript}, description={A computer programming language that allows users to interact with contents on webpages.}}
+
+\newglossaryentry{nlp}{name={NLP},description={Natural Language Processing, the study of using computers to interpret natural languages through linguistic analysis.}}
+
+\newglossaryentry{nltk}{name={NLTK}, description={Natural Language ToolKit, a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning.(Extracted from \url{http://nltk.org/})}}
+
 \begin{document}
 \lstset{language=Python,
 basicstyle=\ttfamily,
@@ -24,25 +60,24 @@ showstringspaces=false}
 \tableofcontents
 \listoffigures
 
-
 \chapter{An Evaluation of Web-Scraping}
 \section*{Introduction}
 
 \indent Web-scraping is a way to collect existing information from the Internet. It is a nascent, powerful, but disputable subject in the arena of modern technology. Using tools to simulate viewing and downloading of a webpage through a browser, the `spider' (a metaphoric name for the part that goes into each web structure) goes into the webpage and `crawls' (a metaphor for copy-and-paste) desirable contents into a formatted data structure. Since this technology only requires access to the webpages, theoretically, anything that can be downloaded can be scraped off the Internet.
 
-In the past summer, I worked with Pinnacle Solutions, Inc.\footnote{For information, visit http://psiconsultants.com/}, a company in Indianapolis, Indiana. My job was solely to develop web-scrapers. In this paper, I will provide an overview and discussion of web-scraping, followed by a description of my internship experience.
+In the past summer, I worked with Pinnacle Solutions, Inc.\footnote{For information, visit \url{http://psiconsultants.com/}}, a company in Indianapolis, Indiana. My job was solely to develop web-scrapers. In this paper, I will provide an overview and discussion of web-scraping, followed by a description of my internship experience.
 
 \section{An Overview of Web-Scraping}
-In general, there are three basic ways to collect data: from primary sources, e.g., conducting surveys and studies; from secondary sources, e.g., databases like the U.S. Census; and from existing but uncompiled information, e.g., product reviews from \textit{Amazon.com}. Web-scraping focuses on the last way: to harvest data from a structured webpage, e.g., HTML\footnote{Abbreviation of HyperText Markup Language}, to a structured format, e.g.,  \textit{.json}\footnote{Abbreviation of JavaScript Object Notation} and \textit{.csv}\footnote{Abbreviation of Comma-Separated Values}. It provides an amalgamation of the deluge of data spread over websites.
+In general, there are three basic ways to collect data: from primary sources, e.g., conducting surveys and studies; from secondary sources, e.g., databases like the U.S. Census; and from existing but uncompiled information, e.g., product reviews from \textit{Amazon.com}. Web-scraping focuses on the last way: to \gls{harvest} data from a structured webpage, e.g., an HTML table, to a structured format, e.g., \gls{json} and \gls{csv}. It provides an amalgamation of the deluge of data spread over websites.
 
 \section{Usage of Web-Scraping}
 As web-scraping does not generate new data or results, it seems useless. However, people from various backgrounds may find web-scraping very useful. Here are few examples:
 
-If a student were to conduct a study on what lessons people learn from documentaries such as \textit{Food, Inc.}, he/she could go to \textit{imdb.com}, \textit{amazon.com} and \textit{rottentomatoes.com} to scrape all the viewers' reviews. As there are thousands of reviews for \textit{Food, Inc.}, web-scraping will help the student save much time trying to copy and paste every review. From the integrated results, the students might do a word frequency count to guess what kind of impression the majority have.
+If a student were to conduct a study on what lessons people learn from documentaries such as \textit{Food, Inc.}, he/she could go to \url{http://imdb.com}, \url{http://amazon.com} and \url{http://rottentomatoes.com} to scrape all the viewers' reviews. As there are thousands of reviews for the movie, web-scraping will help the student save much time trying to copy and paste every review. From the integrated results, the students might do a word frequency count to guess what kind of impression the majority have.
 
-If a company were to have launched a product, they could use web-scraping to monitor their product, their competitors' products, and their partners products. If Amazon wants to know how successful is the new Kindle Fire HD, they can web-scrape all the reviews about Kindle Fire HD, about Nexus 7, and about Kindle Fire original version. Through analysis, Amazon is able to collect customers' feedback promptly.
+If a company were to have launched a product, they could use web-scraping to monitor their product, their competitors' products, and their partners products. If people from Amazon.com  want to know how successful is the new Kindle Fire HDX, they can web-scrape all the reviews about Kindle Fire HDX, about Nexus 7, and about Kindle Fire HD. Through analysis, Amazon.com is able to collect customers' feedback promptly.
 
-If a statistician were to monitor the price change of thousands of commodities, and if all these commodities are sold online, the official can use web-scraping to collect the prices. The scraper will just copy the prices from the product page of an online retailer website, and paste all of them in a spreadsheet. Shifts in prices may reflect inflation/deflation, and the data can be used in economic research.
+If a statistician were to monitor the price change of thousands of commodities, and if all these commodities are sold online, the statistician can use web-scraping to collect the prices. The scraper will just copy the prices from the product page of an online retailer website, and paste all of them in a spreadsheet. Shifts in prices may reflect inflation/deflation, and the data can be used in economic research.
 
 If a data analyst from Apple were to study how the public responds whenever a new product is released, he/she could collect the review dates from review websites and plot a frequency graph. The number of reviews generated per day may reflect how receptive the customers are to a new product.
 
@@ -50,71 +85,77 @@ If a data analyst from Apple were to study how the public responds whenever a ne
 
 \subsection{Speed}
 
-Web-scraping allows people to copy and paste from webpages faster. For instance, to harvest 10,000 pieces of Amazon.com product reviews manually by copying and pasting every little piece of information into an excel spreadsheet, doing it manually would take a very long time and be prone to mistakes. Web-scraping technology, on the other hand, makes the process much faster. By specifying certain paths in the webpage structure, the spiders go into specific attributes and fields to crawl information. With the help of web-scraping, 10,000 reviews can be copied and pasted into a \textit{.csv} file within 15 minutes.\footnote{The result is based on running of my own scraper.}
-
-
+Web-scraping allows people to copy and paste from webpages faster. For instance, one wants to harvest 10,000 pieces of Amazon.com product reviews. Doing the job manually by copying and pasting every little piece of information into an excel spreadsheet would take a very long time and be prone to mistakes. Web-scraping technology, on the other hand, makes the process much faster. By specifying certain paths in the webpage structure, the spiders go into specific attributes and fields to \gls{crawl} information. With the help of web-scraping, 10,000 reviews can be copied and pasted into a \gls{csv} file within 15 minutes.\footnote{The result is based on running of my own scraper.}
 
 \subsection{Convenience for Data Analysis}
 
-Web-scraping improves the efficiency of data analysis. More often than not, tables of data are more ready to be processed than plain text. As web-scraping grabs from a structured format, it is able to copy and paste all the information needed into another structured format. For instance, after a \textit{.csv} file is generated by scraping data from Amazon product reviews, all cells in the \textit{ratings} column have a range of 1 to 5 for number of stars, all cells in the \textit{review body} column will contain texts of the review bodies. A well-structured database will then provide foundation for further data mining and other modeling techniques.
+Web-scraping improves the efficiency of data analysis. More often than not, tables of data are more ready to be processed than plain text. As web-scraping grabs from a structured format, it is able to copy and paste all the information needed into another structured format. For instance, after a \gls{csv} file is generated by scraping data from Amazon product reviews, all rows in the \textit{ratings} column have a range of 1 to 5 for number of stars, all rows in the \textit{review body} column will contain texts of the review bodies. A well-structured database will then provide foundation for further data \gls{mining} and other modeling techniques.
 
 \subsection{Availability}
 
-Web-scraping are being more widely available today. Popular tools for web-scraping include browser extensions like \textit{firebug} and \textit{iMacros}, programs like \textit{Wget}, programming languages like \textit{Perl}, \textit{Hadoop} and \textit{Java} which have libraries to support sending HTTP requests, and programming language extensions like \textit{Scrapy} and \textit{Beautiful Soup} for \textit{Python}. It is becoming more feasible for anyone to learn web-scraping, and to harvest data beyond what traditional ways like web API requests\footnote{requesting information through interacting with website's database} can offer.
+Web-scraping are being more widely available today. Popular tools for web-scraping include browser extensions such as \textit{firebug} and \textit{iMacros}, programs such as \textit{Wget}, programming languages such as \textit{Perl}, \textit{Hadoop} and \textit{Java} which have libraries to support sending HTTP requests, and programming language extensions such as \textit{Scrapy} and \textit{Beautiful Soup} for \textit{Python}. It is becoming more feasible for anyone to learn web-scraping, and to \gls{harvest} data beyond what traditional ways such as web \gls{api} can offer.
 
 \section{Challenges of Web-Scraping}
 
-\subsection{Legality(extensive overhaul needed)}
+\subsection{Legality}
 
-Web-scraping raises legal and ethical issues. While it is free to download many webpages, usage of the data within might not be in compliance with the terms and conditions of the source. Currently, there is no law forbidding web-scraping, nor is there any way to ban downloading of webpages(footnote needed, but I cannot find any law passages anyway ). Lawsuits were fought between companies like American Airlines against FareChase (http://www.fornova.net/documents/AAFareChase.pdf ), but it is impossible to ban people from downloading webpages. Practically, people use free information with citations. Frankly, as activities beyond downloading the webpages are operated locally, it is very hard to track what information the user really scraped from. Therefore, there is a grey area in law and practice that people who use web-scraping tools find time and space to develop their projects.
+Web-scraping raises legal and ethical issues. While it is free to download many webpages, usage of the data within might not be in compliance with the terms and conditions of the source. 
+
+There exists a fine line between using and stealing data. Currently, there is no law forbidding web-scraping all together, nor is there any way to ban downloading of webpages. However, as web-scraping becomes more versatile and powerful, companies are becoming more vigilant on data protection. 
+
+In 2000, Bidder's Edge, a website that collects auction information from various websites, collected and displayed auction information from eBay. eBay sued Bidder's Edge for ``trespass to chattels''\footnote{For more information, visit \url{http://definitions.uslegal.com/t/trespass-to-chattels/}}, and Bidder's Edge soon went out of business.\footnote{For information on the ruling, visit \url{http://www.tomwbell.com/NetLaw/Ch06/eBay.html}}
+
+In March 2013, Associated Press (AP) won a lawsuit against Meltwater, a Norwegian group, over copyright infringement. Before then, if the customer would like to know how frequently a certain word appears in the news, Meltwater could do that through scraping from various news websites. Meltwater used to be able to collect the news, put them into databases, and render them to customers on demand, but not any more. The court ruled that the usage of those news were beyond the scope of ``fair usage'',\footnote{For more information about fair use, visit \url{http://fairuse.stanford.edu/overview/fair-use/four-factors/}} forbidding Meltwater to scrape from news agencies since then.\footnote{For more information on the ruling, visit \url{http://www.scribd.com/doc/131847330/Meltwater-AP-Ruling}}
+
+In general, there are few things any scraper should watch out for. First, terms of use of the websites. Even though the terms are usually long and tedious, ``I did not see those'' cannot be the excuse of violating the terms. Second, the purpose of the scraped information. If the scraper were to use the scraped information for malicious purposes such as spamming and libel, it is likely to be illegal. Third, possible influence to others. If the number of requests for a certain scraping activity is too large for the website server to handle, other visitors to this website may experience malfunction of the website. It is thus always wise to consult lawyers before making any scraping activity commercial.
 
 \subsection{Intricate and Dynamic Web Structures}
 
-As more advanced web structures emerge, scraping becomes more difficult. AJAX, for instance, sends out XMLHTTPRequest only when the user performs certain maneuvers in the browser. Also, embedded JavaScript contents may not be downloaded. The advent of these dynamic ways of loading web contents brings new challenges to web-scraping. \textbf{CONSIDER THE IMPACT OF HTML 5}
-
+As more advanced web structures emerge, scraping becomes more difficult. \gls{ajax}, for instance, sends out \gls{xmlhttp} only when the user performs certain maneuvers in the browser. Also, embedded \gls{js} contents may not be downloaded locally. The advent of these dynamic ways of loading web contents brings new challenges to web-scraping.
 
 \subsection{Instability}
-Another underlying problem comes from the fact that web-scraping is based on webpage structure. If the website adds a few toolbars, the locations of HTML attributes will change, resulting in crash of the scraper. If the website has an unusual encoding for text, the scraper may crash, too. If the structure is dependent on web browser, they content might be different as well. These potential problems manifest web-scraping's intrinsic dependence on web interface.
+Another underlying problem comes from the fact that web-scraping is based on webpage structure. If the website adds a few toolbars, the locations of HTML attributes will change, resulting in crash of the scraper. There also exists the problem of \gls{ende}. If the website has an unusual encoding for text, the scraper may crash, too. If the structure is dependent on web browser, they content might be different as well. These potential problems manifest web-scraping's intrinsic dependence on web interface.
+
+In the following two pictures, the same webpage is opened using two different browsers, Google Chrome and Mozilla Firefox, under the same environment at the same time. They are different in locations of choice of flavor, availability of customer image, font sizes and layouts, sites available for sharing, etc.
 
 \begin{figure}[htp]
-\includegraphics[width=0.5\textwidth]{lindt_chrome.png}
-\includegraphics[width=0.5\textwidth]{lindt_firefox.png}
+\includegraphics[width=\textwidth]{lindt_chrome.png}
+\includegraphics[width=\textwidth]{lindt_firefox.png}
 \caption[Comparison of same url in different browsers]
 {What Google Chrome displays versus what firefox displays with identical urls.}
 \end{figure}
 
-
 \chapter{My Internship}
 \section{Overview of My Internship at Pinnacle Solutions, Inc.}
-Pinnacle Solutions, Inc.(PSI) is a data company which helps clients to analyze and interpret their databases. Founded in 1996 by Kalamazoo College alumnus Donald Penix, Jr.(DJ), the company,located in downtown Indianapolis, Indiana, currently has over 20 employees. PSI primarily uses \textit{SAS} and \textit{Futrix} \footnote{For more information, see Glossary of Terms} for processing data, and \textit{Amazon Web Services} for some server management.
+Pinnacle Solutions, Inc.(PSI) is a data company which helps clients to analyze and interpret their databases. Founded in 1996 by Kalamazoo College alumnus Donald Penix, Jr., the company, located in downtown Indianapolis, Indiana, currently has over 20 employees. PSI primarily uses \textit{SAS} for processing data, and \textit{Amazon Web Services} for server management.
 
-I was a summer intern at PSI in 2011. At that time, Mr. Penix was very interested in ``sentiment analysis'', a technology aims to discover and analyze sentiment reflected, for example, by comments, reviews, and blog posts. For instance, a comment like ``I love this iPad!" indicates a positive sentiment, and one like ``I am sick of the iPad!" suggests a negative sentiment. Sentiment analysis will consolidate related comments and analyze them using data mining and natural language processing. After research, we found sentiment analysis not feasible for PSI, as none of the employees currently have the needed expertise. So we decided to start from scratch, and data collection is the first step towards sentiment analysis.
+I was a summer intern at PSI in 2011, and my job title was \gls{bi} Content Developer. At that time, Mr. Penix was very interested in sentiment analysis, a technology aims to discover and analyze sentiment reflected through comments, reviews, and blog posts alike. For instance, a comment such as ``I love this iPad!" indicates a positive sentiment, and one such as ``I am sick of the iPad!" suggests a negative sentiment. Sentiment analysis will consolidate related comments and analyze them using \gls{mining} and \gls{nlp}. After research, we found sentiment analysis a tough job for PSI, as none of the employees had the needed expertise. So we decided to start from scratch, and data collection is the first step towards sentiment analysis.
 
-\section{How Web-Scraping Became the Best Option for PSI}
+\section{How Web-Scraping Became the Best Option}
 
-Analysis of data starts from collection of them. In order to harvest usable data from the Internet, there are many ways other than web-scraping.\textbf{Probably ought to refer back to Section 1 where you introduced sources of data.}
+Analysis of data starts from collection of them. As previously discussed, there are three ways to collect data. PSI does not have the resources to conduct primary research, nor does the company has databases of information for reference, so it becomes evident that PSI has to collect data from existing but uncompiled data from the Internet. In order to \gls{harvest} usable data from the Internet, there are many ways other than web-scraping.
 
-First, one can extract necessary information through web APIs.\textbf{explanation of API needed!} Many websites offer APIs for developers to use to build applications. Twitter, for instance, published a new version of API months ago. Through an API, users can request information directly from the webites database, and the data will be clean and formatted. (Twitter, for instance, offers exportable data in \textit{.json} format.) However, to obtain more data, users may need to pay for them. Moreover, many websites may have limited information provided in their web APIs, or may not provide APIs at all. In that case, even though users can view the data from the browser, they cannot download it through APIs. Therefore, for a small company, it might be expensive and insufficient to rely on APIs for data harvesting.
+First, one can extract necessary information through web \gls{api}. Many websites offer APIs for developers to use to build applications. Twitter, for instance, published a new version of API months ago. Through an API, users can request information directly from the website's databases, and the data will be clean and formatted. (Twitter, for instance, offers exportable data in \gls{json} format.) However, to obtain more data, users may need to pay for them. Moreover, many websites may have limited information provided in their web APIs, or may not provide APIs at all. In that case, even though users can view the data from the browser, they cannot download it through APIs. Therefore, for a small company, it might be expensive and insufficient to rely on APIs for data harvesting.
 
-Second, there are available third-party scraping/data harvesting services. There are applications like \textit{Mozenda}\footnote{http://mozenda.com/}, and highly customizable services such as \textit{scrapinghub}\footnote{http://scrapinghub.com/}, \textit{GNIP}\footnote{http://gnip.com/}, and \textit{Open Amplify}\footnote{http://www.openamplify.com/}. However, these services are not cheap to obtain. Moreover, in the long run, as PSI needs more information from the Internet, the dependency on these services will be ever increasing. Therefore, as a data company, it would be a wise choice if PSI could come up with a low cost, independent system to fetch information that is so close yet so far from them. 
+Second, there are available third-party scraping/data harvesting services. There are applications like \textit{Mozenda}\footnote{\url{http://mozenda.com/}}, and highly customizable services such as \textit{scrapinghub}\footnote{\url{http://scrapinghub.com/}}, \textit{GNIP}\footnote{\url{http://gnip.com/}}, and \textit{Open Amplify}\footnote{\url{http://www.openamplify.com/}}. However, these services are not cheap to obtain. Moreover, in the long run, as PSI needs more information from the Internet, the dependency on these services will be ever increasing. Therefore, as a data company, it would be a wise choice if PSI could come up with a low cost, independent system to fetch information that is so close yet so far from them. 
 
-Third, as they are a certified \textit{SAS} reseller, they could use the software \textit{SAS Sentiment Analysis Studio}. However, this application is not only expensive for clients to buy, but also dependent on the web API. 
+Third, as they are a certified \textit{SAS} reseller, they could use the software \textit{SAS Sentiment Analysis Studio}\footnote{For more information, visit \url{http://www.sas.com/text-analytics/sentiment-analysis/}}. However, this application is not only expensive for clients to buy, but also dependent on the web API. 
 
-After many thorough discussion sessions, a free software capable of fetching data from the Internet was determined to be desirable, and web-scraping seemed most promising. Many web-scraping resources are free, so the cost of doing web-scraping is low. As many programming languages and their extensions are open sources, many people contribute to the library and trouble-shooting, so the technical support is very active.
+After many thorough discussion sessions, a free and open software capable of fetching data from the Internet was determined to be desirable, and web-scraping seemed most promising. Many web-scraping resources are free, so the cost of doing web-scraping is low. As many programming languages and their extensions are open sources, many people contribute to the library and trouble-shooting, so the technical support is very active.
 
-After some research, I chose Scrapy, a Python web-scraping framework, for the job.
+After some research, we chose Scrapy, a Python web-scraping framework, for the job.
 
 \section{Scrapy, a Python Framework}
 
-To quote from its website, ``Scrapy is a fast high-level screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing."\footnote{http://scrapy.org/}
+To quote from its website, ``Scrapy is a fast high-level screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing."\footnote{\url{http://scrapy.org/}}
 
-Scrapy depends not only on Python, but also few other libraries. Scrapy uses Twisted\footnote{http://twistedmatrix.com/trac/}, an event-driven networking engine, and Zope\footnote{http://zope2.zope.org/about-zope-2/what-is-zope-2}, a web application server framework. The installation guide can be found on Scrapy's website\footnote{http://doc.scrapy.org/en/latest/intro/install.html}.
+Scrapy depends not only on Python, but also few other libraries. Scrapy uses Twisted\footnote{\url{http://twistedmatrix.com/trac/}}, an event-driven networking engine, and Zope\footnote{\url{http://zope2.zope.org/about-zope-2/what-is-zope-2}}, a web application server framework. The installation guide can be found on Scrapy's website\footnote{\url{http://doc.scrapy.org/en/latest/intro/install.html}}.
 
 There are few basic ideas or classes in the Scrapy framework.
 
-First, spider. \textit{Spider.py} is responsible for going into the webpages and crawling data from them. At the very least, the user needs to specify the domain, the starting url, and the location in the webpage from which to crawl. If the user wants to scrape from multiple tables or multiple pages, or even conditionally scrape from certain pages, he/she can define those in \textit{Spider.py}
+First, spider. \textit{Spider.py} is responsible for downloading webpages, going into them and crawling data from them. At the very least, the user needs to specify the domain, the starting url, and the location in the webpage from which to crawl. If the user wants to scrape from multiple tables or multiple pages, or even conditionally scrape from certain pages, he/she can define those in \textit{Spider.py}.
 
-Second, items. \textit{Items.py} is a class specifing the column names in the result. In the end, the result would be a table consisting of all the scraped data, and items defines what are they. Items in the same class will be in the same table.
+Second, items. \textit{Items.py} is a class specifying the column names in the result. In the end, the result would be a table consisting of all the scraped data, and items defines what are they. Items in the same class will be in the same table.
 
 Third, settings. \textit{Settings.py} includes information such as what information will be written into the log file, limit on frequency of requests sent, and other customizable features. In the event of a user login is needed, the user can pre-fill that in the login to avoid access denial.
 
@@ -133,26 +174,25 @@ After Scrapy finish analyzing the web address, it goes into its prompt and asks 
 \begin{lstlisting}
 view(response)
 \end{lstlisting} 
-A browser window opens and shows you what the website is like in Scrapy's perspective.\\
-\\
+A browser window opens and shows you what the website is like in Scrapy's perspective. The following two screenshots demonstrate the differences in downloading the page through Scrapy and viewing the page through the browser. 
+
 \begin{figure}[htp]
-\includegraphics[width=0.5\textwidth]{amazon_scrapy_view.png}
-\includegraphics[width=0.5\textwidth]{amazon_normal_view.png}
+\includegraphics[width=\textwidth]{amazon_scrapy_view.png}
+\includegraphics[width=\textwidth]{amazon_normal_view.png}
 \caption[Comparison of views]
-{What scrapy is able to download locally versus what the user can see.}
+{What Scrapy is able to download locally versus what the user can see.}
 \end{figure}
 \section{Test If the Data is Scrapable}
-While in theory, any data which can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that ideal. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embedded \textit{JavaScript} code, getting the result of a function call will be more difficult.
+While in theory, any data which can be seen can be downloaded, and any downloaded data can be scraped, in practice, it is not that ideal. Even if Scrapy can see the data the user needs, the difficulty of scraping them varies. For instance, in the event of embedded \gls{js} code, getting the result of a function call will be more difficult.
 
-After setting up a project with few commands\footnote{For more information, visit http://doc.scrapy.org/en/latest/intro/tutorial.html. The website has a simple example on how to start a project}, it is wise to test if certain data are scrapable. Before knowing that, one needs to specify where exactly the data are located. To establish a standard way of referring to a certain field in the webpage, XPath\footnote{Abbreviation of ``XML Path Language''.For more information, see http://www.w3.org/TR/xpath/} is used.
+After setting up a project with few commands\footnote{For more information, visit \url{http://doc.scrapy.org/en/latest/intro/tutorial.html}. The website has a simple example on how to start a project}, it is wise to test if certain data are scrapable. Before knowing that, one needs to specify where exactly the data are located. To establish a standard way of referring to a certain field in the webpage, XPath\footnote{Abbreviation of ``XML Path Language''.For more information, see \url{http://www.w3.org/TR/xpath/}}is used.
 
-To retrieve a certain XPath, one can use an built-in \textit{``Inspect Element''} tool, or an extension such as \textit{firebug}\footnote{Visit http://getfirebug.com/ for more information}, available for \textit{Firefox} and \textit{Google Chrome}. Here is an example using \textit{``Inspect Element''} in \textit{Google Chrome} to extract an XPath from \textit{http://www.nbcnews.com}:\\
+To retrieve a certain XPath, one can use an built-in \textit{``Inspect Element''} tool, or an extension such as \textit{firebug}\footnote{Visit \url{http://getfirebug.com/ for more information}}, available for \textit{Firefox} and \textit{Google Chrome}. Here is an example using \textit{``Inspect Element''} in \textit{Google Chrome} to extract an XPath from \url{http://www.nbcnews.com}:\\
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{XPath_example.png}
 \caption[How to extract XPath]
 {A screenshot of how to obtain an XPath from a webpage, and the XPath of the link is \textit{//*[@id=``cell1'']/div[8]/div/div/h6/a}.}
 \end{figure}
-
 After knowing a specific XPath, one can write related code to test if Scrapy can recognize the XPath and scrape the data.If one piece of data is scrapable, it is likely that the entire table which contains that piece of data can be scraped. If the table is scrapable, it is also likely that similar tables can be scraped, too.
 
 \section{Iterators}
@@ -167,29 +207,40 @@ class Spider(BaseSpider):
 			yield Request(url_of_the_next_page,callback=self.parse)
 \end{lstlisting}
 
-In the code above, \textit{BaseSpider} is one of the spider classes the user has to inherit to build a user-defined spider. In any spider class, a method like \textit{parse(self,response)} is necessary to communicate with the computer and instruct which fields in the html to scrape from. The \textit{parse} method yields a generator, and the code does not necessarily end there. In the event that there is a next page with the same html format, the parse method will be able to go into the new html webpage and collect the new data in the same way as it did for the previous page. Therefore, the method \textit{parse} can also yield a \textit{Request}. \textit{Request} represents an HTTPRequest in many case. It sends a signal to the scraper and asks for a \textit{Response}, which will be handed to the spider and the spider will scrape it.
+In the code above, \textit{BaseSpider} is one of the spider classes the user has to inherit to build a user-defined spider. In any spider class, a method like \textit{parse(self,response)} is necessary to communicate with the computer and instruct which fields in the html to scrape from. The \textit{parse} method yields a generator, and the code does not necessarily end there. In the event that there is a next page with the same html format, the parse method will be able to go into the new html webpage and collect the new data in the same way as it did for the previous page. Therefore, the method \textit{parse} can also yield a \textit{Request}. \textit{Request} represents an \gls{http} in many cases. It sends a signal to the scraper and asks for a \textit{Response}, which will be handed to the spider and the spider will scrape it.
 
 \section{Specification}
 
 After sketching and testing the basic functionalities, it is time to study what types of information the clients want, and what types of information are needed to make database management easier. 
 
-The clients usually ask for specific data that are useful to their research. For instance, an author may want to read all of his books' reviews. To collect book reviews from websites such as \textit{amazon.com} and \textit{goodreads.com}, we need different spiders for different websites, but potentially generate tables with identical column names so that the author can view everything in one sheet. That datasheet may contain book name, edition number, publisher, review website, user name of the reviewer, date of review, ratings, review bodies, and other information as the column names.
+The clients usually ask for specific data that are useful to their research. For instance, an author may want to read all of his books' reviews. To collect book reviews from websites such as \url{http://amazon.com} and \url{http://goodreads.com}, we need different spiders for different websites, but potentially generate tables with identical column names so that the author can view everything in one sheet. That data sheet may contain book name, edition number, publisher, review website, user name of the reviewer, date of review, ratings, review bodies, and other information as the column names.
 
-On the developer's end, however, the structure will be very different. To track every piece of review, the developer may need a column with the url from which that particular review was pulled. To establish an iterator, the developer may need to track the book identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer needs to customize every spider to suit its respective website.
+On the developer's end, however, the structure will be very different. To track every piece of review, the developer may need a column with the url from which that particular review was pulled. To establish an iterator, the developer may need to track the book identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer needs to customize every spider.
 
-(More examples are on the way)
+A piece of pseudo-code for extracting a certain text could be:
+\begin{lstlisting}
+item['some_field']=HtmlXPathSelector(response).select('SOME/XPATH/IN/HTML/text()').extract()
+\end{lstlisting}
 
 \section{Produce a sample output}
 
 After studying what and how the spider should scrape from webpages, we are ready to produce a sample output. The sample output is necessary for three reasons.
 
-First, formatting and encoding. It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. For instance, most websites are written in utf-8, but Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it.(code snippets and examples on their way).
+First, formatting and encoding. It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in utf-8, but Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
+\begin{figure}[htp]
+\includegraphics[width=\textwidth]{scrapy_screenshot_terminal.png}
+\caption[Scrapy screenshot in Mac Terminal]
+{What extracted data may look like in Terminal.}
+\end{figure}
 
-Second, communication with clients and manager. Only when the sample data sheet is out, can the results of scraping be evaluted. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time of producing a sample output influences the frequency of running the scraper. In the event that the target website restricts IP adress from visiting it too fast, the time taken to scrape data will definitely be longer than expected.
+Second, communication with clients and manager. Only when the sample data sheet is out, can the results of scraping be evaluated. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time of producing a sample output influences the frequency of running the scraper. In the event that the target website restricts IP address from visiting it too fast, the time taken to scrape data will definitely be longer than expected.
 
-Third, testing. As web-scraping is based on web structure and HTTP requests, it is unstable by nature. Although the code may work perfectly in theory, it may encounter problems in practice. These problem may be relevant to Internet connection, broadband width, geographic locatin, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receive responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments on the code.
-
-\section{Customization}
+Third, testing. As web-scraping is based on web structure and HTTP requests, it is unstable by nature. Although the code may work perfectly in theory, it may encounter problems in practice. These problem may be relevant to Internet connection, broadband width, geographic location, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receive responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments on the code.
+\begin{figure}[htp]
+\includegraphics[width=\textwidth]{sample_output.png}
+\caption[Sample csv output]
+{What extracted data may look like in csv format.}
+\end{figure}
 
 After the sample output seems qualified, the developer may consider other functionalities which may enhance the utility of a particular scraper. 
 
@@ -203,16 +254,15 @@ For another instance, one can make the scraper more interactive with the user. O
 \section{Natural Language Toolkit}
 After harvesting data from online sources, there are various ways to enjoy the fruit. This chapter will illustrate some of possible ways to use the data.
 
+Natural Language ToolKit, or \gls{nltk}, has many functions, and one of them is tokenization. Tokenization is the process of breaking up a paragraph into sentences, a sentence into phrases, a phrase to words, or even a word to its components. These subsets are called tokens, and more study can be done through analyzing these tokens.
 
-NLTK, the abbreviation for ``Natural Language Toolkit'', is ``a leading platform for building Python programs to work with human language data.''\footnote{quote from http://nltk.org} This toolkit has many functions, and one of them is tokenization. Tokenization is the process of breaking up a paragraph into sentences, a sentence into phrases, a phrase to words, or even a word to its components. These subsets are called tokens, and more study can be done through analyzing these tokens.
-
-For instance, if a product manager would like to monitor the sentiment of customers on the product, he/she could use web-scraping to collect review texts from online rating websites. Although those texts are available, the feedback from the reviews are not quantitative. With NLTK, however, one can tokenize each review into sentences, and sentences into phrases. For example, one can assign a score of ``1'' if the review says ``I hate this product!'', and a score of ``10'' if the review reads ``I love this product!''. There are databases such as WordNet available for download as a package for NLTK, and there are algorithms for assigning scores to words.
+For instance, if a product manager would like to monitor the sentiment of customers on the product, he/she could use web-scraping to collect review texts from online rating websites. Although those texts are available, the feedback from the reviews are not quantitative. With \gls{nltk}, however, one can tokenize each review into sentences, and sentences into phrases. For example, one can assign a score of ``1'' if the review says ``I hate this product!'', and a score of ``10'' if the review reads ``I love this product!''. There are databases such as WordNet available for download as a package for \gls{nltk}, and there are algorithms for assigning scores to words.
 
 However, there are few challenges in the process of detecting sentiment. 
 
 First, the ambiguity of language. Same word may have different meanings in different context. For instance, in the review of a product, ``I am sick of it'' and ``This product is sick!'' have opposite sentiments, but they both use the word ``sick'' to express the sentiment. As the internet language becomes increasingly versatile, with slangs, emoticons, puns, and other forms of language in the scraped text, the difficulty of guessing the right sentiment of an expression increases drastically.
 
-Second, the complexity of language. Short statements such as ``This product is great!'' or ``I hate it!'' are generally easier for sentiment detection. As the statement becomes longer into a complex sentence, a paragraph or even multiple paragraphs, the evaluation of a certain review becomes more complicated, too. For instance, for a review such as ``Though this product may not be the worst in the world, please choose other products if possible.'', it seems obvious to human that the sentence contains negative sentiment against the product. To the computer, however, when it sees ``not'' followed by ``worst'', it may assign a very positive sentiment to this review.
+Second, the complexity of language. Short statements such as ``This product is great!'' and ``I hate it!'' are generally easier for sentiment detection. As the statement becomes longer into a complex sentence, a paragraph or even multiple paragraphs, the evaluation of a certain review becomes more complicated, too. For instance, for a review such as ``Though this product may not be the worst in the world, please choose other products if possible.'', it seems obvious to human that the sentence contains negative sentiment against the product. To the computer, however, when it sees ``not'' followed by ``worst'', it may assign a very positive sentiment to this review.
 
 \section{Data Mining}
 
@@ -229,49 +279,16 @@ Second, limitation of accessible data. Websites are not likely to display some d
 
 For future development of web-scraping, it is possible to build an user interface from the code. 
 
-To scrape information related to a particular item, the user can choose a website to scrape from, and input necessary fields such as the unique identifier of that item in the website. Then, the user can choose from a checklist of what areas to scrape from, and the number of results shown. Then, after clicking a button, the Python script at the backend will use Scrapy to retrieve the input information, create starting and ending urls, and scrape selected results from relevant pages.
+To scrape information related to a particular item, the user can choose a website to scrape from, and input necessary fields such as the unique identifier of that item in the website. Then, the user can choose from a checklist of what areas to scrape from, and the number of results shown. Then, after clicking a button, the Python script at the back end will use Scrapy to retrieve the input information, create starting and ending urls, and scrape selected results from relevant pages.
 
 However, there are few limitations of establishing an interface.
 
-First, validity of user input. As the backend Python script retrieves information from the user interface, invalid input may cause the program to stop functioning.
+First, validity of user input. As the back end Python script retrieves information from the user interface, invalid input may cause the program to stop functioning.
 
 Second, constantly changing web interfaces. As web-scraping depends heavily on web structures, in the event of a change in web interfaces, the spider will probably fail to crawl information. Therefore, both the programmer and the user need to update frequently. The stability of the software will be very fragile.
 
 \newpage
 \begin{appendices}
-Glossary of Terms
-
-Ajax, JavaScript
-
-Amazon Product Reviews
-
-API
-
-Business Intelligence
-
-Crawl
-
-.csv, .json, .xml
-
-data harvesting
-
-data mining
-
-encoding, decoding
-
-HTTPRequest
-
-NLP and NLTK
-
-SAS, Futrix
-
-sentiment analysis
-
-spider
-
-scraper
-
-web-scraping
-
+\printglossaries
 \end{appendices}
 \end{document}
