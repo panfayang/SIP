@@ -215,20 +215,22 @@ In the code above, \textit{BaseSpider} is one of the spider classes the user has
 
 After sketching and testing the basic functionalities, we proceed to consider the types of information clients want and the types of information needed to make database management easier. 
 
-The clients usually ask for specific data that are useful to their businesses. For instance, an author may want to read all of the reviewers of her latest book. To collect book reviews from websites such as \url{http://amazon.com} and \url{http://goodreads.com}, we need different spiders, one for each website. Nevertheless, it may be possible to instruct the spiders to generate tables with identical column names so that the author can view everything in one sheet. That data sheet may contain book name, edition number, publisher, review website, user name of the reviewer, date of review, ratings, review bodies, and other information as the column names.
+The clients usually ask for specific data that are useful to their businesses. For instance, an author may want to read all of the reviewers of her latest book. To collect book reviews from websites such as \url{http://amazon.com} and \url{http://goodreads.com}, we need different spiders, one for each website. Nevertheless, it may be possible to instruct the spiders to generate tables with identical column names so that the author can view everything in one sheet. That data sheet may contain the book title, edition number, publisher, review website, user name of the reviewer, date of the review, ratings, the body of the review, and other information specified by the column names.
 
-On the developer's end, however, the structure will be very different. To track every piece of review, the developer may need a column with the url from which that particular review was pulled. To establish an iterator, the developer may need to track the book identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer needs to customize every spider.
+On the developer's end, however, the structure will be very different. To track every single review, the developer may need a column with the url from which that particular review was pulled. To iterate through all reviews of the same book, the developer may need to track that book's identification number on the website to generate the correct url to scrape from. To deal with different encodings and web structures of different websites, the developer needs to customize every spider.
 
 A piece of pseudo-code for extracting a certain text could be:
 \begin{lstlisting}
 item['some_field']=HtmlXPathSelector(response).select('SOME/XPATH/IN/HTML/text()').extract()
 \end{lstlisting}
 
+In the code above, 'some_field' is the user defined name for the column. The HtmlXPathSelector will find the specified XPath, and extract the text contained in the XPath.
+
 \section{Produce a sample output}
 
-After studying what and how the spider should scrape from webpages, we are ready to produce a sample output. The sample output is necessary for three reasons.
+After studying what and how the spider should scrape from webpages, we are ready to produce a sample output. The sample output serves three purposes.
 
-First, formatting and encoding. It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in utf-8, but Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
+\textbf{``Formatting and encoding''.} It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in utf-8, but Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{scrapy_screenshot_terminal.png}
 \caption[Scrapy screenshot in Mac Terminal]

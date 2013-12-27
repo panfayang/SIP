@@ -15,6 +15,8 @@ For page 14/30, need to check the usage of Twisted and Zope.
 
 Page 18/30, more information about XPath?? And location path??? what?
 
+page 21/30, utf-8 glossary.
+
 
 
 
