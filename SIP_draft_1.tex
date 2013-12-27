@@ -226,51 +226,51 @@ item['some_field']=HtmlXPathSelector(response).select('SOME/XPATH/IN/HTML/text()
 
 In the code above, 'some_field' is the user defined name for the column. The HtmlXPathSelector will find the specified XPath, and extract the text contained in the XPath.
 
-\section{Produce a sample output}
+\section{Produce sample output}
 
-After studying what and how the spider should scrape from webpages, we are ready to produce a sample output. The sample output serves three purposes.
+After studying what and how the spider should scrape from webpages, we are ready to produce sample output. The sample output is a small subset of potentially large actual output. For instance, if a product has a million reviews, the sample output may include the first 100 of them. We want to make sure the sample output is desirable before scraping from the entire database. The sample output serves three purposes.
 
-\textbf{``Formatting and encoding''.} It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in utf-8, but Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
+\textbf{``Formatting and encoding''.} It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in utf-8, but because Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{scrapy_screenshot_terminal.png}
 \caption[Scrapy screenshot in Mac Terminal]
-{What extracted data may look like in Terminal.}
+{Example of extracted data in Terminal.}
 \end{figure}
 
-Second, communication with clients and manager. Only when the sample data sheet is out, can the results of scraping be evaluated. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time of producing a sample output influences the frequency of running the scraper. In the event that the target website restricts IP address from visiting it too fast, the time taken to scrape data will definitely be longer than expected.
+\textbf{``Communication with clients and manager''.} Only when the sample data sheet has been produced, can the results of scraping be evaluated. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time it takes to produce sample output influences the frequency of running the scraper. Sometimes, to keep off web-scrapers and protect data, the target website restricts the IP address from visiting it too fast. The simplest way to work around the problem it to limit the number of pages downloaded in a time interval. However, the time taken to scrape data will be longer than expected.
 
-Third, testing. As web-scraping is based on web structure and HTTP requests, it is unstable by nature. Although the code may work perfectly in theory, it may encounter problems in practice. These problem may be relevant to Internet connection, broadband width, geographic location, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receive responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments on the code.
+\textbf{``Testing''.} As web-scraping is based on web structure and HTTP requests, it is inherently unstable. Although the code may work perfectly in theory, it may encounter problems in practice. These problems may be relevant to Internet connection, bandwidth, geographic location, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receives responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments to the code.
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{sample_output.png}
 \caption[Sample csv output]
-{What extracted data may look like in csv format.}
+{Example of extracted data in csv format.}
 \end{figure}
 
-After the sample output seems qualified, the developer may consider other functionalities which may enhance the utility of a particular scraper. 
+After the sample output is deemed satisfactory, the developer may consider adding other functionalities which may enhance the utility of a particular scraper. 
 
-For instance, to efficiently scrape updated reviews from a website, one can build a last page tracker. If a product has 50 pages of reviews on day 1, one can view the reviews by ascending date order so that the latest review appears on the last page. After the scraper scrapes the 50 pages on day 1, it store the last page as 50, so that when there are 60 pages on day 2, the scraper can start scraping from page 50 to 60, without re-scraping the first 49 pages.
+For instance, to efficiently scrape updated reviews from a website, one can build a ``last page tracker.'' If a product has 50 pages of reviews on day 1, one can view the reviews by ascending date order so that the latest review appears on the last page. After the scraper scrapes the 50 pages on day 1, it stores the last page as 50, so that when there are 60 pages on day 2, the scraper can start scraping from page 50 to 60, without re-scraping the first 49 pages.
 
-For another instance, one can make the scraper more interactive with the user. One can use Pipeline to save the output data into a user specified directory. For some scraping job like product reviews, it is also possible to ask for an identifier of the product, and the scraping process will start from an auto-generated url.
+For another example of an enhancement to web-scraping, one can make the scraper more interactive with the user. One can use Pipeline to save the output data into a user specified directory. For some scraping jobs like product reviews, it is also possible to ask for an identifier of the product, and the scraping process will start from an auto-generated url.
 
 \chapter{Future Development of the Project}
 
+After harvesting data from online sources, there are various ways to enjoy the fruit of one's efforts. This chapter will illustrate some of the possible ways to use the data.
 
 \section{Natural Language Toolkit}
-After harvesting data from online sources, there are various ways to enjoy the fruit. This chapter will illustrate some of possible ways to use the data.
 
-Natural Language ToolKit, or \gls{nltk}, has many functions, and one of them is tokenization. Tokenization is the process of breaking up a paragraph into sentences, a sentence into phrases, a phrase to words, or even a word to its components. These subsets are called tokens, and more study can be done through analyzing these tokens.
+Natural Language ToolKit, or \gls{nltk}, is a toolkit for natural language processing in Python. The toolkit has many functions, and one of them is tokenization. Tokenization is the process of breaking up a paragraph into sentences, a sentence into phrases, a phrase into words, or even a word into its components. These subsets are called tokens, and more study can be done through analyzing these tokens.
 
-For instance, if a product manager would like to monitor the sentiment of customers on the product, he/she could use web-scraping to collect review texts from online rating websites. Although those texts are available, the feedback from the reviews are not quantitative. With \gls{nltk}, however, one can tokenize each review into sentences, and sentences into phrases. For example, one can assign a score of ``1'' if the review says ``I hate this product!'', and a score of ``10'' if the review reads ``I love this product!''. There are databases such as WordNet available for download as a package for \gls{nltk}, and there are algorithms for assigning scores to words.
+For instance, if a product manager would like to monitor the sentiment of customers regarding a product, he/she could use web-scraping to collect review texts from online rating websites. Although those texts are available, the feedback from the reviews is not quantitative. With \gls{nltk}, however, one can tokenize each review into sentences, and sentences into phrases. For example, one can assign a score of ``1'' if the review says ``I hate this product!'', and a score of ``10'' if the review reads ``I love this product!''. There are databases such as WordNet available for download as a package for \gls{nltk}, and there are algorithms for assigning scores to words.
 
 However, there are few challenges in the process of detecting sentiment. 
 
-First, the ambiguity of language. Same word may have different meanings in different context. For instance, in the review of a product, ``I am sick of it'' and ``This product is sick!'' have opposite sentiments, but they both use the word ``sick'' to express the sentiment. As the internet language becomes increasingly versatile, with slangs, emoticons, puns, and other forms of language in the scraped text, the difficulty of guessing the right sentiment of an expression increases drastically.
+\textbf{The ambiguity of language.} A single word may have different meanings in different contexts. For instance, in the review of a product, ``I am sick of it'' and ``This product is sick!'' have opposite sentiments, but they both use the word ``sick'' to express the sentiment. As the internet language becomes increasingly versatile, with slang, emoticons, puns, and other forms of language in the scraped text, the difficulty of guessing the right sentiment of an expression increases drastically.
 
-Second, the complexity of language. Short statements such as ``This product is great!'' and ``I hate it!'' are generally easier for sentiment detection. As the statement becomes longer into a complex sentence, a paragraph or even multiple paragraphs, the evaluation of a certain review becomes more complicated, too. For instance, for a review such as ``Though this product may not be the worst in the world, please choose other products if possible.'', it seems obvious to human that the sentence contains negative sentiment against the product. To the computer, however, when it sees ``not'' followed by ``worst'', it may assign a very positive sentiment to this review.
+\textbf{The complexity of language.} Short statements such as ``This product is great!'' and ``I hate it!'' are generally easier for sentiment detection. As the statement becomes longer, extending into a complex sentence, paragraph, or even multiple paragraphs, the evaluation of the sentiment of the review also becomes more complicated. For instance, for a review such as, ``Though this product may not be the worst in the world, please choose other products if possible.'', it seems obvious to a human that the sentence contains negative sentiment against the product. To the natural language processor, however, when it sees ``not'' followed by ``worst'', it may assign a very positive sentiment to this review.
 
 \section{Data Mining}
 
-Web-scraping has the potential of collecting data from multiple facets. When a review website displays reviews on its webpage, information such as date, ratings, review texts and other relevant details will be available as well. 
+Web-scraping has the potential to collect data from multiple facets. When a review website displays reviews on its webpage, information such as date, ratings, review texts and other relevant details will be available as well. 
 
 While it seems feasible to operate data mining under many collectable variables, the actual practice will not be easy. There are two main limitations.
 
