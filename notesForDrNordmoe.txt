@@ -1,22 +1,8 @@
-well, not that I don't want to include "spin", spin is not a technical word.... T.T
-
-
 on page 8 of 30, I want to express the adaptive nature of web-scraping. They are hard to fend off because they have many ways to request information from the websites.
 
 on page 13 of 30, for the three ways of collecting data, the secondary resource doesn't work because they cannot always find helpful databases... If there are always available and helpful databases for every customer, they don't need the trouble of collecting data from the web, right?
 
-check when twitter updated its api
-
-page 13 of 30, clean and formatted. Here, clean indicated clear from irregularities
-
-For top of page 14 of 30 regarding the Sentiment Analysis Studio, it's... the name of the software.
-
-For page 14/30, need to check the usage of Twisted and Zope.
-
-Page 18/30, more information about XPath?? And location path??? what?
-
-page 21/30, utf-8 glossary.
-
+page 25/30 don't know what to write about data mining
 
 
 
