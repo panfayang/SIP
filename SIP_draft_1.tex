@@ -10,6 +10,8 @@
 \doublespacing
 \usepackage[hyphens]{url}
 \usepackage{index}
+\usepackage{setspace}
+\doublespacing
 \usepackage[nopostdot]{glossaries}
 \makeglossaries
 
@@ -48,6 +50,7 @@
 \newglossaryentry{nltk}{name={NLTK}, description={Natural Language ToolKit, a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning.(Extracted from \url{http://nltk.org/})}}
 
 \begin{document}
+\pagenumbering{roman}
 \lstset{language=Python,
 basicstyle=\ttfamily,
 commentstyle=\textit,
@@ -116,7 +119,7 @@ The content of this paper is mostly developed from my firsthand experience durin
 
 \chapter{An Evaluation of Web-Scraping}
 \section*{Introduction}
-
+\pagenumbering{arabic}
 Web-scraping is a way to collect existing information from the Internet. It is a nascent, powerful, but somewhat controversial subject in the arena of modern technology. Using tools to simulate viewing and downloading of a webpage through a browser, the `spider' (a metaphoric name for the part that goes into each web structure) goes into the webpage and `crawls' (a metaphor for copy-and-paste) desirable contents into a formatted data structure. Since this technology only requires access to the webpages, theoretically, anything that can be downloaded can be scraped off the Internet.
 
 In the past summer, I worked with Pinnacle Solutions, Inc.,\footnote{For information, visit \url{http://psiconsultants.com/}} a company in Indianapolis, Indiana. My job was solely to develop web-scrapers. In this paper, I will provide an overview and discussion of web-scraping, followed by a description of my internship experience.

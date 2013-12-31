@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 DEC 2013 06:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 DEC 2013 06:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,23 +345,23 @@ Package: glossary-tree 2012/09/21 v3.03 (NLCT)
 \glo@main@file=\write5
 \openout5 = `SIP_draft_1.glo'.
 
-Package glossaries Info: Writing glossary file SIP_draft_1.glo on input line 14
+Package glossaries Info: Writing glossary file SIP_draft_1.glo on input line 16
 .
  (./SIP_draft_1.aux)
 \openout1 = `SIP_draft_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -451,96 +451,96 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 122.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 125.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [7
+) [1
 
-] [8]
-[9] [10] [11] <lindt_chrome.png, id=48, 1284.8pt x 803.0pt>
+] [2]
+[3] [4] [5] <lindt_chrome.png, id=48, 1284.8pt x 803.0pt>
 File: lindt_chrome.png Graphic file (type png)
 
 <use lindt_chrome.png>
-Package pdftex.def Info: lindt_chrome.png used on input line 178.
+Package pdftex.def Info: lindt_chrome.png used on input line 181.
 (pdftex.def)             Requested size: 469.75502pt x 293.5888pt.
  <lindt_firefox.png, id=49, 1284.8pt x 803.0pt>
 File: lindt_firefox.png Graphic file (type png)
 
 <use lindt_firefox.png>
-Package pdftex.def Info: lindt_firefox.png used on input line 179.
+Package pdftex.def Info: lindt_firefox.png used on input line 182.
 (pdftex.def)             Requested size: 469.75502pt x 293.5888pt.
- [12] [13 <./lindt_chrome.png> <./lindt_firefox.png>]
+ [6] [7 <./lindt_chrome.png> <./lindt_firefox.png>]
 Chapter 2.
-[14
+[8
 
-] [15] [16] [17]
+] [9] [10] [11]
 Chapter 3.
 <amazon_scrapy_view.png, id=69, 1284.8pt x 803.0pt>
 File: amazon_scrapy_view.png Graphic file (type png)
 
 <use amazon_scrapy_view.png>
-Package pdftex.def Info: amazon_scrapy_view.png used on input line 236.
+Package pdftex.def Info: amazon_scrapy_view.png used on input line 239.
 (pdftex.def)             Requested size: 469.75502pt x 293.5888pt.
 
 <amazon_normal_view.png, id=70, 1284.8pt x 803.0pt>
 File: amazon_normal_view.png Graphic file (type png)
 
 <use amazon_normal_view.png>
-Package pdftex.def Info: amazon_normal_view.png used on input line 237.
+Package pdftex.def Info: amazon_normal_view.png used on input line 240.
 (pdftex.def)             Requested size: 469.75502pt x 293.5888pt.
 
 
-LaTeX Warning: Float too large for page by 9.7476pt on input line 240.
+LaTeX Warning: Float too large for page by 9.7476pt on input line 243.
 
-[18
+[12
 
-] [19 <./amazon_scrapy_view.png> <./amazon_normal_view.png>]
+] [13 <./amazon_scrapy_view.png> <./amazon_normal_view.png>]
 <XPath_example.png, id=78, 1284.8pt x 803.0pt>
 File: XPath_example.png Graphic file (type png)
  <use XPath_example.png>
-Package pdftex.def Info: XPath_example.png used on input line 249.
+Package pdftex.def Info: XPath_example.png used on input line 252.
 (pdftex.def)             Requested size: 469.75502pt x 293.5888pt.
- [20]
-[21 <./XPath_example.png>]
+ [14]
+[15 <./XPath_example.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 262.
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 261.
- [22] [23]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 287.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 264.
+ [16] [17]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 290.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 287.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 287.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 290.
 
 <scrapy_screenshot_terminal.png, id=93, 933.4875pt x 366.36874pt>
 File: scrapy_screenshot_terminal.png Graphic file (type png)
 
 <use scrapy_screenshot_terminal.png>
-Package pdftex.def Info: scrapy_screenshot_terminal.png used on input line 290.
+Package pdftex.def Info: scrapy_screenshot_terminal.png used on input line 293.
 
 (pdftex.def)             Requested size: 469.75502pt x 184.36906pt.
- [24 <./scrapy_screenshot_terminal.png>]
+ [18 <./scrapy_screenshot_terminal.png>]
 <sample_output.png, id=101, 1045.9075pt x 352.31625pt>
 File: sample_output.png Graphic file (type png)
  <use sample_output.png>
-Package pdftex.def Info: sample_output.png used on input line 299.
+Package pdftex.def Info: sample_output.png used on input line 302.
 (pdftex.def)             Requested size: 469.75502pt x 158.23979pt.
 
-[25 <./sample_output.png>] [26]
+[19 <./sample_output.png>] [20]
 Chapter 4.
-[27
+[21
 
-] [28] [29] [30] [31
+] [22] [23] [24] [25
 
 
-] (./SIP_draft_1.gls [32
+] (./SIP_draft_1.gls [26
 
 
 ]
@@ -549,98 +549,98 @@ Overfull \hbox (52.272pt too wide) in paragraph at lines 47--47
 cr/m/n/12 http : / / www . unicode . org / versions / Unicode6 .
  []
 
-[33]
+[27]
 Overfull \hbox (52.39409pt too wide) in paragraph at lines 50--53
 \OT1/cmr/m/n/12 (From $\OT1/pcr/m/n/12 https : / / developer . mozilla . org / 
 en -[] US / docs / Web / API / XMLHttpRequest$\OT1/cmr/m/n/12 )
  []
 
-) [34]
+) [28]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 365.
+LaTeX Warning: Empty `thebibliography' environment on input line 368.
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 349--365
+Underfull \hbox (badness 1430) in paragraph at lines 352--368
 []\OT1/cmr/m/it/12 Scrapy 0.21 doc-u-men-ta-tion\OT1/cmr/m/n/12 , Scrapy de-vel
 -op-ers; $\OT1/pcr/m/n/12 http : / / doc . scrapy . org / en /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 \OT1/pcr/m/n/12 http : / / mherman . org / blog / 2012 / 11 / 08 / recursively 
 -[] scraping -[] web -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 349--365
+Underfull \hbox (badness 1406) in paragraph at lines 352--368
 \OT1/cmr/m/n/12 P. Paratey, ``Writ-ing a spi-der in 10 mins us-ing Scrapy'', bl
 og, 21 Jan. 2010;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 \OT1/pcr/m/n/12 http : / / pravin . paratey . com / posts / writing -[] a -[] s
 pider -[] in -[] 10 -[] mins -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 349--365
+Underfull \hbox (badness 1917) in paragraph at lines 352--368
 \OT1/cmr/m/n/12 , 16 May 2013; $\OT1/pcr/m/n/12 https : / / devcentral . f5 . c
 om / articles / web -[] scraping -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--365
+Underfull \hbox (badness 10000) in paragraph at lines 352--368
 
  []
 
-[35
+[29
 
-] [36] (./SIP_draft_1.aux) ) 
+] [30] (./SIP_draft_1.aux) ) 
 Here is how much of TeX's memory you used:
  7634 strings out of 493315
  108008 string characters out of 6137904
- 250049 words of memory out of 5000000
+ 250048 words of memory out of 5000000
  10901 multiletter control sequences out of 15000+600000
  12137 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -657,7 +657,7 @@ fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/loca
 l/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
 e/2013/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on SIP_draft_1.pdf (37 pages, 2262841 bytes).
+Output written on SIP_draft_1.pdf (37 pages, 2262694 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
