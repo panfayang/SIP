@@ -1,0 +1,44 @@
+http://mherman.org/blog/2012/11/08/recursively-scraping-web-pages-with-scrapy/
+
+http://www.w3schools.com/xpath/xpath_syntax.asp
+
+http://doc.scrapy.org/en/latest/intro/tutorial.html
+
+http://pravin.paratey.com/posts/writing-a-spider-in-10-mins-using-scrapy
+
+http://www.opencongress.org/wiki/Web_Scraping_Legal_Issues
+
+http://venturebeat.com/2011/05/30/how-legal-is-content-scraping/
+
+https://devcentral.f5.com/articles/web-scraping-data-collection-or-illegal-activity#.Ur-6l2RDtc9
+
+http://www.tomwbell.com/NetLaw/Ch06/eBay.html
+
+http://www.techdirt.com/articles/20090605/2228205147.shtml
+
+http://www.distilnetworks.com/is-web-scraping-illegal-depends-on-what-the-meaning-of-the-word-is-is/
+
+http://fairuse.stanford.edu/overview/fair-use/four-factors/
+
+Unsupervised Discovery of a Statistical Verb Lexicon
+Trond Grenager and Christopher D. Manning
+Computer Science Department
+Stanford University
+Stanford, CA 94305
+{grenager, manning}@cs.stanford.edu
+
+Modeling Semantic Containment and Exclusion
+in Natural Language Inference
+Bill MacCartney
+Stanford University
+wcmac@cs.stanford.edu
+Christopher D. Manning
+Stanford University
+manning@cs.stanford.edu
+
+
+graphy of Happiness: Connecting Twitter sentiment and expression,
+demographics, and objective characteristics of place
+
+
+http://www.computer.org/portal/web/publications/style_refs

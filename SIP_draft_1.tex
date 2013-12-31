@@ -8,7 +8,7 @@
 \usepackage{courier}
 \usepackage[toc,page]{appendix}
 \doublespacing
-\usepackage{hyperref}
+\usepackage[hyphens]{url}
 \usepackage{index}
 \usepackage[nopostdot]{glossaries}
 \makeglossaries
@@ -97,8 +97,19 @@ showstringspaces=false}
 
 \chapter*{Preface}
 
+Charlotte, a spider, was a life saver in E.B. White's novel, \textit{Charlotte's Web}. I am never a fan of spiders. But in the summer of 2013, a spider creeped into my life and saved me.
+
+This is not an ordinary spider. The Internet is its web, and information is its prey. It crawls into every corner of a webpage and fetches whatever information it needs. What is this? You will find out in this paper.
+
+I spent 10 weeks in Pinnacle Solutions, Inc as a summer intern, playing with spiders. Nobody in the company knew anything about spiders, so I had to learn mostly by myself. Through the internship, with the help from online resources and colleagues, I gained more understanding of these spiders, so I am now writing a paper for them. You will hardly find any reference to books or journals, because there are not many of them. The topic is relatively new, and the ways to build spiders are still evolving. I spent a lot of time asking for help from online forums, as most of the knowledge about spiders actually resides in those forums.
+
+I would like to express my very great appreciation to Mr. Donald Penix Jr., for offering me the internship and the opportunity to develop web-scrapers. He enlightened me with the idea of this paper, trusted me and rendered all the support I needed. I would like to extend my deep gratitude to Dr. Eric Nordmoe, my advisor, for his patient guidance and useful critiques. Finally, I wish to thank my colleagues at Pinnacle Solutions, Inc., my friends and family for their encouragement and support.
 
 \chapter*{Abstract}
+
+The demand for information is ever increasing. While some has the privilege of accessing private data, others look for ways to collect information from where anyone could visit: the Internet. On the Internet, there is much information available just on the webpages, and there is a way to possibly extract certain pieces from webpages and organize those pieces efficiently: web-scraping. This paper describes what is web-scraping, its controversy, application, implementation, and potential. 
+
+The content of this paper is mostly developed from my firsthand experience during an internship. The analysis of web-scraping is based on my encounter with the technology, and the examples are mainly from online sources. The paper covers some suggestions on building a web-scraper, in parallel with existing online tutorials. In the end, the paper discusses some possible outlook of web-scraping, and some challenges it faces. 
 
 \tableofcontents
 \listoffigures
@@ -316,13 +327,9 @@ However, there are few challenges in the process of detecting sentiment.
 
 Web-scraping has the potential to collect data from multiple dimensions. When a review website displays reviews on its webpage, information such as date, ratings, review texts and other relevant details will be available as well. 
 
-With multi-faceted data, it is possible to conduct further research on relationships between columns of data. For instance, 
+With multi-faceted data, it is possible to conduct further research on relationships between columns of data. For instance, some publishers want to find how likely a book gets a five-star review. Using web-scraping, we can collect data from few book review websites such as \textit{goodreads.com} and \textit{amazon.com}. A five-star review might be related to a book's genre, language, country, length, availability, historic value, publishing house, awards received, etc., and those pieces of information should be available on the webpages. Using web-scraping, the publishers could collect possible factors leading to a five-star review, and thus developing better strategies to publish books in the future.
 
-While it seems feasible to operate data mining under many collectable variables, the actual practice will not be easy. There are two main limitations.
-
-First, limitation of parsing. The default format of scraped data is string, but more often than not, numbers are preferred in data mining. The process of parsing numbers from their string representations may incur errors.
-
-Second, limitation of accessible data. Websites are not likely to display some data, such as demographic data, to the public. To investigate possible correlations, insufficient data will be available for scraping.
+While it seems feasible to operate data mining under many collectable variables, the actual practice will not be easy. There are two main limitations: parsing and accessible data. The default format of scraped data is string, but more often than not, numbers are preferred in data mining. The process of parsing numbers from their string representations may incur errors. Moreover, websites are not likely to display some data, such as demographic data, to the public. To investigate possible correlations, insufficient data will be available for scraping.
 
 
 \section{Graphic User Interface}
@@ -337,4 +344,23 @@ However, there are few limitations of establishing an interface. As the back end
 \begin{appendices}
 \printglossaries
 \end{appendices}
+\begin{thebibliography}{9}
+
+\textit{Scrapy 0.21 documentation}, Scrapy developers; \url{http://doc.scrapy.org/en/latest/}.\\\\
+
+\textit{XPath Tutorial}, W3Shools; \url{http://www.w3schools.com/xpath/default.asp}.\\\\
+
+M. Herman, ``Recursively Scraping Web Pages With Scrapy'', blog, 8 Nov. 2012; \url{http://mherman.org/blog/2012/11/08/recursively-scraping-web-pages-with-scrapy/}.\\\\
+
+P. Paratey, ``Writing a spider in 10 mins using Scrapy'', blog, 21 Jan. 2010; \url{http://pravin.paratey.com/posts/writing-a-spider-in-10-mins-using-scrapy}.\\\\
+
+C. Smolar, ``How legal is content scraping?'', \textit{venturebeat}, 30 May 2011; \url{http://venturebeat.com/2011/05/30/how-legal-is-content-scraping/}.\\\\
+
+J. Wagnon, ``Web Scraping - Data Collection or Illegal Activity?'', \textit{F5 DevCentral }, 16 May 2013; \url{https://devcentral.f5.com/articles/web-scraping-data-collection-or-illegal-activity#.UsKk-2RDtc_}.\\\\
+
+R Stim, ``Measuring Fair Use: The Four Factors,'' \textit{Stanford Copyright and Fair Use Center}, 2013; \url{http://fairuse.stanford.edu/overview/fair-use/four-factors/}. \\\\
+
+L. Mitchell et al., ``The Geography of Happiness: Connecting Twitter Sentiment and Expression, Demographics, and Objective Characteristics of Place,'' \textit{Plos One}, 29 May 2013; DOI: 10.1371/journal.pone.0064417. \\\\
+
+\end{thebibliography}
 \end{document}

@@ -2,7 +2,5 @@ on page 8 of 30, I want to express the adaptive nature of web-scraping. They are
 
 on page 13 of 30, for the three ways of collecting data, the secondary resource doesn't work because they cannot always find helpful databases... If there are always available and helpful databases for every customer, they don't need the trouble of collecting data from the web, right?
 
-page 25/30 don't know what to write about data mining
-
 
 

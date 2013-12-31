@@ -19,7 +19,7 @@
 		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{29}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
 \glsgroupheading{E}\relax \glsresetentrylist %
 \glossaryentryfield{ende}{\glsnamefont{encoding and decoding}}{The conversion between elements of a certain language and numbers and texts. For instance, the character ``A'' is encoded as ``0X41'' in UTF-8 hex format, and ``01110001'' in UTF-8 binary format decodes to the character ``q''.}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{12}}}\glsgroupskip
@@ -41,7 +41,7 @@
 \glossaryentryfield{nlp}{\glsnamefont{NLP}}{Natural Language Processing, the study of using computers to interpret natural languages through linguistic analysis.}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{14}}}%
 \glossaryentryfield{nltk}{\glsnamefont{NLTK}}{Natural Language ToolKit, a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning.(Extracted from \url {http://nltk.org/})}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{28\delimN 29}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{27\delimN 28}}}\glsgroupskip
 \glsgroupheading{U}\relax \glsresetentrylist %
 \glossaryentryfield{utf8}{\glsnamefont{utf-8}}{Universal Character Set Transformation Format--8-bit is a variable-width encoding that can represent every character in the Unicode character set. It was designed for backward compatibility with ASCII. More information can be found at \url {http://en.wikipedia.org/wiki/UTF-8} and \url {http://www.unicode.org/versions/Unicode6.0.0/}}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{24}}}\glsgroupskip
