@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 DEC 2013 06:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  6 JAN 2014 11:14
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **SIP_draft_1.tex
@@ -640,7 +640,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--368
 Here is how much of TeX's memory you used:
  7634 strings out of 493315
  108008 string characters out of 6137904
- 250048 words of memory out of 5000000
+ 250047 words of memory out of 5000000
  10901 multiletter control sequences out of 15000+600000
  12137 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
