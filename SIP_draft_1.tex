@@ -1,16 +1,15 @@
-\documentclass[12pt]{report}
+\documentclass[12pt,twoside]{report}
 \usepackage{comment}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{indentfirst}
 \usepackage{setspace}
-\usepackage{fullpage}
+%\usepackage{fullpage}
+\usepackage[margin=1in,left=1.5in]{geometry}
 \usepackage{courier}
 \usepackage[toc,page]{appendix}
-\doublespacing
 \usepackage[hyphens]{url}
 \usepackage{index}
-\usepackage{setspace}
 \doublespacing
 \usepackage[nopostdot]{glossaries}
 \makeglossaries
@@ -98,24 +97,29 @@ showstringspaces=false}
 \thispagestyle{empty}
 \mbox{}
 
+\cleardoublepage
 \chapter*{Preface}
 
-Charlotte, a spider, was a life saver in E.B. White's novel, \textit{Charlotte's Web}. I am never a fan of spiders. But in the summer of 2013, a spider creeped into my life and saved me.
+Charlotte, a spider, was a life saver in E.B. White's novel, \textit{Charlotte's Web}. I have never been a fan of spiders. But in the summer of 2013, a spider creeped into my life and saved me.
 
 This is not an ordinary spider. The Internet is its web, and information is its prey. It crawls into every corner of a webpage and fetches whatever information it needs. What is this? You will find out in this paper.
 
-I spent 10 weeks in Pinnacle Solutions, Inc as a summer intern, playing with spiders. Nobody in the company knew anything about spiders, so I had to learn mostly by myself. Through the internship, with the help from online resources and colleagues, I gained more understanding of these spiders, so I am now writing a paper for them. You will hardly find any reference to books or journals, because there are not many of them. The topic is relatively new, and the ways to build spiders are still evolving. I spent a lot of time asking for help from online forums, as most of the knowledge about spiders actually resides in those forums.
+I spent 10 weeks in Pinnacle Solutions, Inc as a summer intern, playing with spiders. Nobody in the company knew anything about spiders, so I had to learn mostly by myself. Through the internship, with help from online resources and colleagues, I gained more understanding of these spiders, so I am now writing a paper for them. You will hardly find any reference to books or journals, because there are not many of them. The topic is relatively new, and the ways to build spiders are still evolving. I spent a lot of time asking for help from online forums, as most of the knowledge about spiders actually resides in those forums.
 
-I would like to express my very great appreciation to Mr. Donald Penix Jr., for offering me the internship and the opportunity to develop web-scrapers. He enlightened me with the idea of this paper, trusted me and rendered all the support I needed. I would like to extend my deep gratitude to Dr. Eric Nordmoe, my advisor, for his patient guidance and useful critiques. Finally, I wish to thank my colleagues at Pinnacle Solutions, Inc., my friends and family for their encouragement and support.
-
+I would like to express my very great appreciation to Mr. Donald Penix Jr., for offering me the internship and the opportunity to develop web-scrapers. He enlightened me with the idea of this paper, trusted me and rendered all the support I needed. I would like to extend my deep gratitude to Dr. Eric Nordmoe, my advisor, for his patient guidance and useful critiques. I would like to thank my parents, Ping Pan and Ling Yang, for their understanding and unwavering support. A heartfelt thanks goes to my girlfriend, Yin Cai, for her caring presence when I lost my way in the web. Finally, I wish to thank my colleagues at Pinnacle Solutions, Inc. and my friends for their encouragement and support.
+\cleardoublepage
 \chapter*{Abstract}
 
-The demand for information is ever increasing. While some has the privilege of accessing private data, others look for ways to collect information from where anyone could visit: the Internet. On the Internet, there is much information available just on the webpages, and there is a way to possibly extract certain pieces from webpages and organize those pieces efficiently: web-scraping. This paper describes what is web-scraping, its controversy, application, implementation, and potential. 
+The demand for information is ever increasing. While some have the privilege of accessing private data, others look for ways to collect information from where anyone could visit: the Internet. On the Internet, there is much information available just on the webpages, and there is a way to possibly extract certain pieces from webpages and organize those pieces efficiently: web-scraping. This paper describes what is web-scraping, its controversy, application, implementation, and potential. 
 
-The content of this paper is mostly developed from my firsthand experience during an internship. The analysis of web-scraping is based on my encounter with the technology, and the examples are mainly from online sources. The paper covers some suggestions on building a web-scraper, in parallel with existing online tutorials. In the end, the paper discusses some possible outlook of web-scraping, and some challenges it faces. 
+The content of this paper is mostly developed from my firsthand experience during an internship. The analysis of web-scraping is based on my encounter with the technology, and the examples are mainly from online sources. The paper covers some suggestions on building a web-scraper, in parallel with existing online tutorials. In the end, the paper discusses the possible future of web-scraping, and some challenges it faces. 
+
+\cleardoublepage
 
 \tableofcontents
 \listoffigures
+
+\cleardoublepage
 
 \chapter{An Evaluation of Web-Scraping}
 \section*{Introduction}
@@ -150,7 +154,7 @@ Web-scraping improves the efficiency of data analysis. The tables of data that w
 
 \subsection{Availability}
 
-Web-scraping tools are becoming more widely available today. Popular tools for web-scraping include browser extensions such as \textit{firebug} and \textit{iMacros}, programs such as \textit{Wget}, programming languages such as \textit{Perl}, \textit{Hadoop} and \textit{Java} which have libraries to support sending HTTP requests, and programming language extensions such as \textit{Scrapy} and \textit{Beautiful Soup} for \textit{Python}. It is becoming more feasible for anyone to learn web-scraping, and to \gls{harvest} data beyond traditional methods such as using web \gls{api}.
+Web-scraping tools are becoming more widely available today. Popular tools for web-scraping include browser extensions such as \textit{firebug} and \textit{iMacros}, programs such as \textit{Wget}, programming languages such as \textit{Perl}, \textit{Hadoop} and \textit{Java} which have libraries to support sending HTTP requests, and programming language extensions such as \textit{Scrapy} and \textit{Beautiful Soup} for \textit{Python}. It is becoming more feasible for anyone to learn web-scraping, and to \gls{harvest} data beyond traditional methods such as using web \gls{api}s.
 
 \section{Challenges of Web-Scraping}
 
@@ -184,6 +188,7 @@ In the following two pictures, the same webpage is opened using two different br
 {What Google Chrome displays versus what Firefox displays with identical urls.}
 \end{figure}
 
+\cleardoublepage
 \chapter{My Internship}
 \section{Overview of My Internship at Pinnacle Solutions, Inc.}
 Pinnacle Solutions, Inc.(PSI) is a start-up which helps clients to analyze and interpret their databases. Founded in 1996 by Kalamazoo College alumnus Donald Penix, Jr., the company, located in downtown Indianapolis, Indiana, currently has over 20 employees. PSI primarily uses \textit{SAS} for processing data, and \textit{Amazon Web Services} for server management.
@@ -192,7 +197,7 @@ I was a summer intern at PSI in 2011, and my job title was \gls{bi} Content Deve
 
 \section{How Web-Scraping Became the Best Option}
 
-Data analysis begins with data collection. As previously discussed, there are three ways to collect data. PSI is not interested in conducting primary research, because the research can be costly and lengthy. PSI would love to always have secondary databases available for analysis, but that is hardly possible, as PSI usually needs information beyond the scope of existing databases. Therefore, it becomes evident that PSI need to collect data from existing but uncompiled data from the Internet. Since large amount of data is needed, the process should be automated. In order to \gls{harvest} usable data from the Internet, there are many ways other than web-scraping.
+Data analysis begins with data collection. As previously discussed, there are three ways to collect data. PSI is not interested in conducting primary research, because the research can be costly and lengthy. PSI would love to always have secondary databases available for analysis, but that is hardly possible, as PSI usually needs information beyond the scope of existing databases. Therefore, it becomes evident that PSI need to collect data from existing but uncompiled data from the Internet. Since a large amount of data is needed, the process should be automated. In order to \gls{harvest} usable data from the Internet, there are many ways other than web-scraping.
 
 First, one can extract necessary information using a web \gls{api}. Many websites offer APIs for developers to use to build applications. Twitter, for instance, published a new version of its API in August, 2013. Through an API, users can request information directly from the website's databases, and the data will be clean and formatted. Twitter, for instance, offers exportable data in \gls{json} format. However, to obtain access to data in greater breadth, amount or detail, users may need to pay for them. Moreover, many websites may have limited information provided in their web APIs, or may not provide APIs at all. In that case, even though users can view the data from the browser, they cannot download it through APIs. Therefore, for a small company, it might be expensive and insufficient to rely on APIs for data harvesting.
 
@@ -222,6 +227,7 @@ The pipeline. \textit{Pipelines.py} decides how the scraped data are to be proce
 
 Scrapy has more advanced features, which would fall outside of the scope of this paper. In the next chapter, I offer a high level approach to web-scraping using Scrapy.
 
+\cleardoublepage
 \chapter{Scrapy Explained in Greater Detail}
 
 \section{Test How Much You Can See}
@@ -287,7 +293,7 @@ In the code above, 'some\_field' is the user defined name for the column. The Ht
 
 After studying what and how the spider should scrape from webpages, we are ready to produce sample output. The sample output is a small subset of potentially large actual output. For instance, if a product has a million reviews, the sample output may include the first 100 of them. We want to make sure the sample output is desirable before scraping from the entire database. The sample output serves three purposes.
 
-\textbf{``Formatting and encoding''.} It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in \gls{utf8}, but because Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
+\textbf{Formatting and encoding.} It is not unusual when the ideal is far from reality. Although XPath offers a specific location of all scrapable information, it is highly possible that the formatting is not desirable. Also, most websites are written in \gls{utf8}, but because Python's csv module defaults encoding to ascii, a paragraph often has a \textit{\textbackslash u} in front of it. For instance, a review ``I like this!'' will be translated into \textbackslash u``   ,    ,    ,   , I like this!'' through Scrapy.
 
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{scrapy_screenshot_terminal.png}
@@ -295,9 +301,9 @@ After studying what and how the spider should scrape from webpages, we are ready
 {Example of extracted data in Terminal.}
 \end{figure}
 
-\textbf{``Communication with clients and manager''.} Only when the sample data sheet has been produced, can the results of scraping be evaluated. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time it takes to produce sample output influences the frequency of running the scraper. Sometimes, to keep off web-scrapers and protect data, the target website restricts the IP address from visiting it too fast. The simplest way to work around the problem it to limit the number of pages downloaded in a time interval. However, the time taken to scrape data will be longer than expected.
+\textbf{Communication with clients and manager.} Only when the sample data sheet has been produced, can the results of scraping be evaluated. There are limitations to scraping, so it is essential to make clients and managers aware of those. For instance, the time it takes to produce sample output influences the frequency of running the scraper. Sometimes, to keep off web-scrapers and protect data, the target website restricts the IP address from visiting it too fast. The simplest way to work around the problem it to limit the number of pages downloaded in a time interval. However, the time taken to scrape data will be longer than expected.
 
-\textbf{``Testing''.} As web-scraping is based on web structure and HTTP requests, it is inherently unstable. Although the code may work perfectly in theory, it may encounter problems in practice. These problems may be relevant to Internet connection, bandwidth, geographic location, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receives responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments to the code.
+\textbf{Testing.} As web-scraping is based on web structure and HTTP requests, it is inherently unstable. Although the code may work perfectly in theory, it may encounter problems in practice. These problems may be relevant to Internet connection, bandwidth, geographic location, configuration of the computer, and other factors which may influence the scraping process. As the spider sends out requests and receives responses at a fast pace, it might encounter concurrency issues, causing some data to be skipped over or scraped repeatedly. All these issues are instrumental to the performance of a certain spider and Scrapy project, so the developer needs to read the sample output in great detail and make amendments to the code.
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{sample_output.png}
 \caption[Sample csv output]
@@ -310,6 +316,7 @@ For instance, to efficiently scrape updated reviews from a website, one can buil
 
 For another example of an enhancement to web-scraping, one can make the scraper more interactive with the user. One can use Pipeline to save the output data into a user specified directory. For some scraping jobs like product reviews, it is also possible to ask for an identifier of the product, and the scraping process will start from an auto-generated url.
 
+\cleardoublepage
 \chapter{Future Development of the Project}
 
 After harvesting data from online sources, there are various ways to enjoy the fruit of one's efforts. This chapter will illustrate some of the possible ways to use the data.
@@ -330,7 +337,7 @@ However, there are few challenges in the process of detecting sentiment.
 
 Web-scraping has the potential to collect data from multiple dimensions. When a review website displays reviews on its webpage, information such as date, ratings, review texts and other relevant details will be available as well. 
 
-With multi-faceted data, it is possible to conduct further research on relationships between columns of data. For instance, some publishers want to find how likely a book gets a five-star review. Using web-scraping, we can collect data from few book review websites such as \textit{goodreads.com} and \textit{amazon.com}. A five-star review might be related to a book's genre, language, country, length, availability, historic value, publishing house, awards received, etc., and those pieces of information should be available on the webpages. Using web-scraping, the publishers could collect possible factors leading to a five-star review, and thus developing better strategies to publish books in the future.
+With multi-faceted data, it is possible to conduct further research on relationships between columns of data. For instance, some publishers want to find how likely a book is to get a a five-star review. Using web-scraping, we can collect data from few book review websites such as \textit{goodreads.com} and \textit{amazon.com}. A five-star review might be related to a book's genre, language, country, length, availability, historic value, publishing house, awards received, etc., and those pieces of information should be available on the webpages. Using web-scraping, the publishers could collect possible factors leading to a five-star review, and thus developing better strategies to publish books in the future.
 
 While it seems feasible to operate data mining under many collectable variables, the actual practice will not be easy. There are two main limitations: parsing and accessible data. The default format of scraped data is string, but more often than not, numbers are preferred in data mining. The process of parsing numbers from their string representations may incur errors. Moreover, websites are not likely to display some data, such as demographic data, to the public. To investigate possible correlations, insufficient data will be available for scraping.
 
@@ -343,31 +350,32 @@ To scrape information related to a particular item, the user can choose a websit
 
 However, there are few limitations of establishing an interface. As the back end Python script retrieves information from the user interface, invalid input may cause the program to stop functioning. In addition, since web-scraping depends heavily on web structures, in the event of a change in web interfaces, the spider will probably fail to crawl information. Therefore, both the programmer and the user need to update frequently. The stability of the software will be very fragile.
 
-\chapter{Reflections}
-
-how the internship had shaped your feelings about your future career.
 
 \newpage
 \begin{appendices}
+\cleardoublepage
 \printglossaries
 \end{appendices}
+\cleardoublepage
 \begin{thebibliography}{9}
+
+
+Herman, M., ``Recursively Scraping Web Pages With Scrapy'', blog, 8 Nov. 2012; \url{http://mherman.org/blog/2012/11/08/recursively-scraping-web-pages-with-scrapy/}.\\\\
+
+Mitchell, L., et al., ``The Geography of Happiness: Connecting Twitter Sentiment and Expression, Demographics, and Objective Characteristics of Place,'' \textit{Plos One}, 29 May 2013; DOI: 10.1371/journal.pone.0064417. \\\\
+
+Paratey, P., ``Writing a spider in 10 mins using Scrapy'', blog, 21 Jan. 2010; \url{http://pravin.paratey.com/posts/writing-a-spider-in-10-mins-using-scrapy}.\\\\
 
 \textit{Scrapy 0.21 documentation}, Scrapy developers; \url{http://doc.scrapy.org/en/latest/}.\\\\
 
+Smolar, C., ``How legal is content scraping?'', \textit{venturebeat}, 30 May 2011; \url{http://venturebeat.com/2011/05/30/how-legal-is-content-scraping/}.\\\\
+
+Stim, R., ``Measuring Fair Use: The Four Factors,'' \textit{Stanford Copyright and Fair Use Center}, 2013; \url{http://fairuse.stanford.edu/overview/fair-use/four-factors/}. \\\\
+
+Wagnon, J., ``Web Scraping - Data Collection or Illegal Activity?'', \textit{F5 DevCentral }, 16 May 2013; \url{https://devcentral.f5.com/articles/web-scraping-data-collection-or-illegal-activity#.UsKk-2RDtc_}.\\\\
+
 \textit{XPath Tutorial}, W3Shools; \url{http://www.w3schools.com/xpath/default.asp}.\\\\
 
-M. Herman, ``Recursively Scraping Web Pages With Scrapy'', blog, 8 Nov. 2012; \url{http://mherman.org/blog/2012/11/08/recursively-scraping-web-pages-with-scrapy/}.\\\\
-
-P. Paratey, ``Writing a spider in 10 mins using Scrapy'', blog, 21 Jan. 2010; \url{http://pravin.paratey.com/posts/writing-a-spider-in-10-mins-using-scrapy}.\\\\
-
-C. Smolar, ``How legal is content scraping?'', \textit{venturebeat}, 30 May 2011; \url{http://venturebeat.com/2011/05/30/how-legal-is-content-scraping/}.\\\\
-
-J. Wagnon, ``Web Scraping - Data Collection or Illegal Activity?'', \textit{F5 DevCentral }, 16 May 2013; \url{https://devcentral.f5.com/articles/web-scraping-data-collection-or-illegal-activity#.UsKk-2RDtc_}.\\\\
-
-R Stim, ``Measuring Fair Use: The Four Factors,'' \textit{Stanford Copyright and Fair Use Center}, 2013; \url{http://fairuse.stanford.edu/overview/fair-use/four-factors/}. \\\\
-
-L. Mitchell et al., ``The Geography of Happiness: Connecting Twitter Sentiment and Expression, Demographics, and Objective Characteristics of Place,'' \textit{Plos One}, 29 May 2013; DOI: 10.1371/journal.pone.0064417. \\\\
 
 \end{thebibliography}
 \end{document}
