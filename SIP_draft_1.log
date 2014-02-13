@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  13 FEB 2014 00:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  13 FEB 2014 00:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -513,7 +513,7 @@ Underfull \vbox (badness 5331) has occurred while \output is active []
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 130.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 129.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -524,7 +524,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [2] [3]
-Underfull \hbox (badness 3271) in paragraph at lines 168--168
+Underfull \hbox (badness 3271) in paragraph at lines 167--167
 [][]\OT1/cmr/m/n/10 For more in-for-ma-tion, visit $\OT1/pcr/m/n/10 http : / / 
 definitions . uslegal . com / t / trespass -[] to -[]
  []
@@ -541,7 +541,7 @@ Chapter 2.
 [9
 
 ] [10]
-Underfull \hbox (badness 6625) in paragraph at lines 207--207
+Underfull \hbox (badness 6625) in paragraph at lines 206--206
 [][]\OT1/cmr/m/n/10 For more in-for-ma-tion, visit $\OT1/pcr/m/n/10 http : / / 
 www . sas . com / text -[] analytics / sentiment -[]
  []
@@ -554,16 +554,16 @@ Chapter 3.
 
 ] [14]
 <XPath_example.png, id=90, 1284.8pt x 803.0pt> [15] [16] [17]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 297.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 296.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 297.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 297.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
 
 <scrapy_screenshot_terminal.png, id=101, 933.4875pt x 366.36874pt> [18]
 <sample_output.png, id=107, 1045.9075pt x 352.31625pt> [19] [20]
@@ -589,104 +589,104 @@ en -[] US / docs / Web / API / XMLHttpRequest$\OT1/cmr/m/n/12 )|
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 381.
+LaTeX Warning: Empty `thebibliography' environment on input line 380.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 \OT1/pcr/m/n/12 http : / / mherman . org / blog / 2012 / 11 / 08 / recursively 
 -[] scraping -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 364--381
+Underfull \hbox (badness 1394) in paragraph at lines 363--380
 \OT1/cmr/m/n/12 Mitchell, L., et al., ``The Ge-og-ra-phy of Hap-pi-ness: Con-ne
 ct-ing Twit-ter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 364--381
+Underfull \hbox (badness 1077) in paragraph at lines 363--380
 \OT1/cmr/m/n/12 Paratey, P., ``Writ-ing a spi-der in 10 mins us-ing Scrapy'', b
 log, 21 Jan.
  []
 
 
-Underfull \hbox (badness 2221) in paragraph at lines 364--381
+Underfull \hbox (badness 2221) in paragraph at lines 363--380
 \OT1/cmr/m/n/12 2010; $\OT1/pcr/m/n/12 http : / / pravin . paratey . com / post
 s / writing -[] a -[] spider -[] in -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 364--381
+Underfull \hbox (badness 5189) in paragraph at lines 363--380
 \OT1/cmr/m/it/12 Scrapy 0.21 doc-u-men-ta-tion\OT1/cmr/m/n/12 , Scrapy de-vel-o
 p-ers; $\OT1/pcr/m/n/12 http : / / doc . scrapy .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 \OT1/pcr/m/n/12 http : / / venturebeat . com / 2011 / 05 / 30 / how -[] legal -
 [] is -[] content -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 364--381
+Underfull \hbox (badness 1275) in paragraph at lines 363--380
 \OT1/cmr/m/it/12 Use Cen-ter\OT1/cmr/m/n/12 , 2013; $\OT1/pcr/m/n/12 http : / /
  fairuse . stanford . edu / overview / fair -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 \OT1/pcr/m/n/12 scraping -[] data -[] collection -[] or -[] illegal -[] activit
 y # .UsKk -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 \OT1/cmr/m/it/12 XPath Tu-to-rial\OT1/cmr/m/n/12 , W3Shools; $\OT1/pcr/m/n/12 h
 ttp : / / www . w3schools . com / xpath /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--381
+Underfull \hbox (badness 10000) in paragraph at lines 363--380
 
  []
 
@@ -715,7 +715,7 @@ pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on SIP_draft_1.pdf (42 pages, 179179 bytes).
+Output written on SIP_draft_1.pdf (42 pages, 179182 bytes).
 PDF statistics:
  186 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams
